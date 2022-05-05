@@ -1,0 +1,58 @@
+@import "./variables";
+
+.itemsWrapper {
+  // background-color: $light-grey;
+  // width: 80%;
+  // margin: 0 auto;
+  padding: 180px 0 120px 0;
+
+  .items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .item {
+      width: calc(95% / 3);
+      position: relative;
+      background-color: $grey;
+      text-align: center;
+      border-radius: 8px;
+      height: 190px;
+
+      .itemLink {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        p {
+          font-weight: 700;
+          font-size: 18px;
+          letter-spacing: 1.28571px;
+          color: $black;
+          margin: 0 0 13px 0;
+        }
+
+        a {
+          font-weight: 700;
+          font-size: 13px;
+          letter-spacing: 1px;
+          color: rgba(0, 0, 0, 0.5);
+          cursor: pointer;
+
+          &:hover {
+            color: $orange;
+          }
+
+          svg {
+            margin-left: 12px;
+          }
+        }
+      }
+
+      img {
+        margin-top: -80px;
+      }
+    }
+  }
+}

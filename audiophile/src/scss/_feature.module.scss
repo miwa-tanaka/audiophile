@@ -1,0 +1,31 @@
+@import "./variables";
+
+.featureWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 160px;
+  padding-bottom: 200px;
+
+  .featureTxt {
+    width: 40%;
+    h2 {
+      color: $black;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 44px;
+      letter-spacing: 1.42857px;
+      text-transform: uppercase;
+
+      span {
+        color: $orange;
+      }
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 25px;
+      color: rgba(0, 0, 0, 0.5)
+    }
+  }
+}

@@ -1,0 +1,210 @@
+@import "./variables";
+
+.goBack {
+  margin-top: 80px;
+  a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.items{
+  &Wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &Txts {
+    .newSign {
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      color: $orange
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 44px;
+      text-transform: uppercase;
+      letter-spacing: 1.42857px;
+      margin: 16px 0 32px 0;
+    }
+
+    .details {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 25px;
+      color: rgba(0, 0, 0, 0.5);
+      margin: 0 0 32px 0;
+    }
+
+    .price {
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 1.28571px;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      margin-top: 50px;
+
+      .counter {
+        display: flex;
+        align-items: center;
+        background-color: $grey;
+        padding: 15px;
+
+        button {
+          background-color: transparent;
+          border: none;
+          font-weight: 700;
+          font-size: 13px;
+          color: rgba(0, 0, 0, 0.5);
+          cursor: pointer;
+        }
+
+        span {
+          padding: 0 15px;
+        }
+      }
+
+      .addCart {
+        margin-left: 16px;
+        font-weight: 700;
+        font-size: 13px;
+        padding: 15px 35px;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $white;
+        background-color: $orange;
+        border: 1px solid $orange;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $light-orange;
+          border: 1px solid $light-orange;
+        }
+      }
+    }
+  }
+}
+
+.featuresAndBox {
+  display: flex;
+  justify-content: space-around;
+
+  .features {
+    width: 50%;
+    h2 {
+      font-weight: 700;
+      font-size: 32px;
+      letter-spacing: 1.14286px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 25px;
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .inTheBox {
+    h2 {
+      font-weight: 700;
+      font-size: 32px;
+      letter-spacing: 1.14286px;
+      text-transform: uppercase;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 8px 0;
+        font-weight: 500;
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.5);
+
+        span {
+          color: $orange;
+          padding-right: 24px;
+        }
+      }
+    }
+  }
+}
+
+.dtlImgs {
+  margin: 150px 0;
+  table {
+    width: 100%;
+
+    td {
+      text-align: center;
+    }
+  }
+}
+
+.recommendation {
+  padding-bottom: 60px;
+  h3 {
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 1.14286px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .products {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .product {
+      width: calc(100% / 3);
+      padding: 0 10px;
+      text-align: center;
+
+      img {
+        width: 100%;
+      }
+
+      h4 {
+        font-weight: 700;
+        font-size: 24px;
+        letter-spacing: 1.71429px;
+        text-transform: uppercase;
+      }
+
+      .url {
+        padding: 15px 30px;
+        background-color: $orange;
+        cursor: pointer;
+        max-width: 160px;
+        margin: 0 auto;
+
+        a {
+          color: $white;
+          font-weight: 700;
+          font-size: 13px;
+        }
+
+        &:hover {
+          background-color: $light-orange;
+        }
+      }
+    }
+  }
+}

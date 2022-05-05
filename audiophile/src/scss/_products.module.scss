@@ -1,0 +1,49 @@
+@import "./variables";
+
+.productImg {
+  max-width: 50%;
+}
+
+.productTxt {
+  span {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: $orange;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 1.42857px;
+    text-transform: uppercase;
+    color: $black;
+    margin: 16px 0 40px 0;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+  }
+
+  div {
+    a {
+      background-color: $orange;
+      padding: 15px 30px;
+      color: $white;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $light-orange;
+      }
+    }
+  }
+}

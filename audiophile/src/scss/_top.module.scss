@@ -1,0 +1,233 @@
+@import "./variables";
+
+.newItemWrapper {
+  background-color: $black2;
+}
+
+.newItem {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.newItemMsg {
+  .newProduct {
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 10px;
+    margin: 0 0 24px 0;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 56px;
+    color: $white;
+    letter-spacing: 2px;
+    line-height: 58px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .newProductTxt {
+    padding-top: 24px;
+    padding-bottom: 40px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.5);
+    width: 60%;
+    margin: 0;
+  }
+
+  .newProductLink {
+
+    a {
+      background-color: $orange;
+      padding: 15px 30px;
+      color: $white;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $light-orange;
+      }
+    }
+  }
+}
+
+.newItemImg {
+  width: 50%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.productsWrapper {
+  width: 80%;
+  margin: 0 auto;
+
+  .zx9 {
+    background-color: $orange;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 50px;
+
+    .zx9Img {
+      width: 60%;
+      text-align: center;
+      padding-top: 90px;
+
+      img {
+        width: 60%;
+        max-width: 500px;
+        margin-bottom: -5px;
+      }
+    }
+
+    .zx9Txt {
+      h2 {
+        font-size: 56px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        line-height: 58px;
+        color: $white;
+        margin: 0;
+      }
+
+      p {
+        width: 60%;
+        color: $white;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 25px;
+        margin: 24px 0 56px 0;
+        opacity: 0.75;
+      }
+    }
+
+    .zx9Link {
+      a {
+        background-color: $black;
+        padding: 15px 30px;
+        color: $white;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $light-black;
+        }
+      }
+    }
+  }
+}
+
+.zx7 {
+  width: 100%;
+  background-image: url("../images/products/zx7-speaker.png");
+  // height: 370px;
+  height: 100%;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  margin-bottom: 50px;
+
+  .zx7Txt {
+    // position: absolute;
+    // top: 40%;
+    // transform: translateX(-40%);
+    // left: 0;
+    padding: 8% 0 10% 6%;
+
+    h3 {
+      font-weight: 700;
+      font-size: 28px;
+      letter-spacing: 2px;
+      color: $black;
+      margin: 0;
+    }
+
+    .zx7Link {
+      margin-top: 42px;
+
+      a {
+        background-color: transparent;
+        border: 1px solid $black;
+        padding: 15px 30px;
+        color: $black;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $black;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.yx1 {
+  display: flex;
+  align-items:stretch;
+  justify-content: space-between;
+  margin-bottom: 50px;
+
+  .yx1Img {
+    width: 50%;
+    margin-right: 30px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .yx1Txt {
+    background-color: $grey;
+    width: 50%;
+    border-radius: 8px;
+
+    h3 {
+      font-weight: 700;
+      font-size: 28px;
+      letter-spacing: 2px;
+      color: $black;
+      margin: 0;
+      padding-top: 18%;
+      padding-left: 10%;
+    }
+
+    .yx1Link {
+      margin-top: 42px;
+      margin-left: 10%;
+
+      a {
+        background-color: transparent;
+        border: 1px solid $black;
+        padding: 15px 30px;
+        color: $black;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $black;
+          color: $white;
+        }
+      }
+    }
+  }
+}
