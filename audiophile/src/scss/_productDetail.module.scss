@@ -69,10 +69,16 @@
           font-size: 13px;
           color: rgba(0, 0, 0, 0.5);
           cursor: pointer;
+
+          &:hover {
+            color: $orange;
+          }
         }
 
         span {
           padding: 0 15px;
+          width: 70px;
+          text-align: center;
         }
       }
 
@@ -189,16 +195,19 @@
       }
 
       .url {
-        padding: 15px 30px;
         background-color: $orange;
         cursor: pointer;
         max-width: 160px;
         margin: 0 auto;
 
         a {
+          display: inline-block;
+          width: 100%;
           color: $white;
           font-weight: 700;
           font-size: 13px;
+          text-decoration: none;
+          padding: 15px 30px;
         }
 
         &:hover {

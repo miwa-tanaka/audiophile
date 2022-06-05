@@ -1,0 +1,419 @@
+@import "./variables";
+
+.checkoutWrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 80px 0;
+
+  .goBack {
+    padding-bottom: 35px;
+
+    button {
+      background: transparent;
+      border: none;
+      font-weight: 500;
+      font-size: 15px;
+      color: rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  .checkoutContents {
+    display: flex;
+    justify-content: space-between;
+
+    .checkout {
+      background-color: $white;
+      width: 65%;
+      margin-right: 30px;
+      border-radius: 10px;
+      padding: 55px 45px;
+
+      h1 {
+        font-weight: 700;
+        font-size: 32px;
+        letter-spacing: 1.14286px;
+      }
+
+      h3 {
+        color: $orange;
+        letter-spacing: 0.928571px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 13px;
+        margin: 0;
+      }
+
+      .input {
+        padding: 15px 0;
+
+        p, label {
+          font-weight: 700;
+          font-size: 14px;
+          letter-spacing: -0.214286px;
+          margin: 0 0 10px 0;
+        }
+
+        input {
+          padding: 15px 0 15px 20px;
+          border-radius: 8px;
+          border: 2px solid $grey;
+          font-weight: 700;
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.4);
+        }
+      }
+
+      .flex {
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+
+        .inputHalf {
+          width: 48%;
+
+          input {
+            width: 100%;
+          }
+        }
+
+        .radio {
+          border: 2px solid $grey;
+          border-radius: 8px;
+          width: 300px;
+          margin-bottom: 16px;
+
+          input[type='radio']:after {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: $white;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 1px solid #CFCFCF;
+          }
+
+          input[type='radio']:checked:after {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: $orange;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 1px solid #CFCFCF;
+          }
+
+          label {
+            display: inline-block;
+            padding: 15px 0 15px 20px;
+            width: 300px;
+            margin: 0;
+            cursor: pointer;
+          }
+
+          input {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .cashMsg {
+        align-items: center;
+        img {
+          width: 60px;
+          height: 60px;
+        }
+
+        p {
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 25px;
+          color: rgba(0, 0, 0, 0.5);
+          width: 90%;
+        }
+      }
+    }
+
+    .summary {
+      background-color: $white;
+      width: 35%;
+      border-radius: 10px;
+      padding: 45px 25px;
+      align-self: baseline;
+
+      h2 {
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 1.28571px;
+      }
+
+
+      .itemListWrapper {
+        padding: 30px 0;
+
+        .itemList {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 0;
+
+          .itemImg {
+            img {
+              width: 100px;
+              border-radius: 15px;
+            }
+          }
+
+          .itemTxt {
+            width: 25%;
+            margin-left: -120px;
+
+            .name {
+              font-weight: 700;
+              font-size: 15px;
+              margin: 0;
+            }
+
+            .price {
+              font-weight: 700;
+              font-size: 14px;
+              color: rgba(0, 0, 0, 0.5);
+              margin: 5px 0 0 0;
+            }
+          }
+
+          .counter {
+            // display: flex;
+            // align-items: center;
+            // background-color: $grey;
+            // padding: 15px;
+
+            span {
+              color: rgba(0, 0, 0, 0.5);
+              font-weight: 700;
+              font-size: 15px;
+              // padding: 0 15px;
+              width: 60px;
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      .total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span {
+          font-weight: 500;
+          font-size: 15px;
+          color: rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+          font-weight: 700;
+          font-size: 18px;
+          margin: 7px 0;
+        }
+
+        .orange {
+          color: $orange;
+          margin: 25px 0;
+        }
+      }
+
+      .pay {
+        padding-top: 15px;
+
+        button {
+          width: 100%;
+          background-color: $orange;
+          border: 1px solid $orange;
+          color: $white;
+          padding: 15px 55px;
+          font-weight: 700;
+          font-size: 13px;
+          text-align: center;
+          letter-spacing: 1px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $light-orange;
+            border: 1px solid $light-orange;
+          }
+        }
+      }
+    }
+  }
+}
+
+.confirmation{
+  &Wrapper {
+    position: fixed;
+    // position: relative;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  &Content {
+    background-color: $white;
+    width: 50%;
+    height: auto;
+    padding: 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    border-radius: 10px;
+
+    h1 {
+      font-weight: 700;
+      font-size: 32px;
+      letter-spacing: 1.14286px;
+    }
+
+    .msg {
+      font-weight: 500;
+      font-size: 15px;
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    .orders {
+      display: flex;
+      justify-content: space-between;
+
+      .ordersItems {
+        width: 50%;
+        // display: flex;
+        // justify-content: space-between;
+        background-color: $light-grey;
+        padding: 24px;
+        border-radius: 7px 0 0 7px;
+
+        .details {
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 10px;
+
+          &Img {
+            width: 80px;
+
+            img {
+              width: 100%;
+              border-radius: 10px;
+            }
+          }
+
+          &Name {
+            width: 45%;
+
+            .name {
+              margin: 0;
+              font-weight: 700;
+              font-size: 15px;
+            }
+
+            .price {
+              margin: 10px 0 0 0;
+              font-weight: 700;
+              font-size: 14px;
+              color: rgba(0, 0, 0, 0.5);
+            }
+          }
+
+          &Count {
+            p {
+              font-weight: 700;
+              font-size: 15px;
+              color: rgba(0, 0, 0, 0.5);
+              margin: 0;
+            }
+          }
+        }
+
+        .count2 {
+          text-align: center;
+          hr {
+            border-top: 1px solid $grey;
+            width: 100%;
+          }
+
+          p {
+            font-weight: 700;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+
+      .ordersTotalWrapper {
+        width: 50%;
+        background-color: $black;
+        border-radius: 0 7px 7px 0;
+        position: relative;
+
+        .ordersTotal {
+          padding-left: 32px;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+
+          .grandtotal {
+            font-weight: 500;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.5);
+          }
+
+          .price {
+            font-weight: 700;
+            font-size: 18px;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .backBtn {
+      margin-top: 45px;
+      width: 100%;
+
+      button {
+        display: inline-block;
+        width: 100%;
+        border: 1px solid $orange;
+        background: $orange;
+        color: $white;
+        font-weight: 700;
+        font-size: 13px;
+        text-align: center;
+        letter-spacing: 1px;
+        padding: 15px 0;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+          background: $light-orange;
+          border: 1px solid $light-orange;
+        }
+      }
+    }
+  }
+}
