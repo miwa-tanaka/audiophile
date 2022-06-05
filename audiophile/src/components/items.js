@@ -14,11 +14,11 @@ const Items = ({ siteTitle }) => (
         <img src={headphones} alt="headphones" />
         <div className={items.itemLink}>
           <p>HEADPHONES</p>
-          <a>
+          <a href="/headphones/">
             SHOP
-            {/* <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" stroke-width="2"/>
-            </svg> */}
+            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" strokeWidth="2"/>
+            </svg>
           </a>
         </div>
       </div>
@@ -26,11 +26,11 @@ const Items = ({ siteTitle }) => (
         <img src={speakers} alt="speakers" />
         <div className={items.itemLink}>
           <p>SPEAKERS</p>
-          <a>
+          <a href="/speakers/">
             SHOP
-            {/* <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" stroke-width="2"/>
-            </svg> */}
+            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" strokeWidth="2"/>
+            </svg>
           </a>
         </div>
       </div>
@@ -38,11 +38,11 @@ const Items = ({ siteTitle }) => (
         <img src={earphones} alt="earphones" />
         <div className={items.itemLink}>
           <p>EARPHONES</p>
-          <a>
+          <a href="/earphones/">
             SHOP
-            {/* <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" stroke-width="2"/>
-            </svg> */}
+            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" strokeWidth="2"/>
+            </svg>
           </a>
         </div>
       </div>

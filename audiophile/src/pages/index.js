@@ -22,7 +22,7 @@ const IndexPage = () => (
           <h1>XX99 Mark II <br /> HeadphoneS</h1>
           <p className={styles.newProductTxt}>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
           <div className={styles.newProductLink}>
-            <a>SEE PRODUCTS</a>
+            <a href="/headphones/xx99-markII/">SEE PRODUCT</a>
           </div>
         </div>
         <div className={styles.newItemImg}>
@@ -40,7 +40,7 @@ const IndexPage = () => (
           <h2>ZX9 <br /> SPEAKER</h2>
           <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
           <div className={styles.zx9Link}>
-            <a>SEE PRODUCTS</a>
+            <a href="/speakers/zx9/">SEE PRODUCT</a>
           </div>
         </div>
       </div>
@@ -48,7 +48,7 @@ const IndexPage = () => (
         <div className={styles.zx7Txt}>
           <h3>ZX7 SPEAKER</h3>
           <div className={styles.zx7Link}>
-            <a>SEE PRODUCTS</a>
+            <a href="/speakers/zx7/">SEE PRODUCT</a>
           </div>
         </div>
       </div>
@@ -59,7 +59,7 @@ const IndexPage = () => (
         <div className={styles.yx1Txt}>
           <h3>YX1 EARPHONES</h3>
           <div className={styles.yx1Link}>
-            <a>SEE PRODUCTS</a>
+            <a href="/earphones/yx1/">SEE PRODUCT</a>
           </div>
         </div>
       </div>
