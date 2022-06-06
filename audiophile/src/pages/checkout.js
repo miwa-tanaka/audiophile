@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useState, useEffect } from 'react'
+import { useForm } from "react-hook-form";
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -17,6 +18,12 @@ import card from "../images/card.png"
 import check from "../images/check.png"
 
 export default function CheckoutPage () {
+  const { register, handleSubmit, formState: { errors } } = useForm(
+    {
+      reValidateMode: 'onSubmit'
+    }
+  );
+
   const [isdisplay, setIsdisplay] = useState(false);
   const [markIIcount, setMarkIIcount] = useState(0);
   const [markIcount, setMarkIcount] = useState(0);
@@ -56,11 +63,6 @@ export default function CheckoutPage () {
     modal.style.display = "none"
   }
 
-  const openModal = () => {
-    const modal = document.getElementById("checkoutModal")
-    modal.style.display = "block"
-  }
-
   const paymentChecked = (event) => {
     const value = event.target.value
     const emoneyStyle = document.getElementById('emoneyChecked')
@@ -76,6 +78,12 @@ export default function CheckoutPage () {
     }
   }
 
+  const onSubmit = data => {
+    const modal = document.getElementById("checkoutModal")
+    modal.style.display = "block"
+    console.log(data)
+  }
+
   return (
     <Layout>
       <Seo title="Checkout" />
@@ -85,42 +93,87 @@ export default function CheckoutPage () {
           <button>Go back</button>
         </div>
 
-        <div className={checkout.checkoutContents}>
+        <form className={checkout.checkoutContents} onSubmit={handleSubmit(onSubmit)}>
           <div className={checkout.checkout}>
             <h1>CHECKOUT</h1>
             <h3>Billing Details</h3>
             <div className={checkout.flex}>
-              <div className={[checkout.input, checkout.inputHalf].join(" ")} >
-                <p>Name</p>
-                <input type="text" placeholder="Alexei Ward" name="name" id="name" />
+              <div className={errors.name ? [checkout.input2, checkout.inputHalf].join(" ") : [checkout.input, checkout.inputHalf].join(" ")} >
+                <span className={checkout.validations}>
+                  <p>Name</p>
+                  <p>
+                    {errors.name && errors.name.type === "required" &&"Required"}
+                    {errors.name && errors.name.type === "maxLength" &&"Too long"}
+                  </p>
+                </span>
+                <input type="text" placeholder="Alexei Ward" name="name" id="name" {...register('name', { required: true, maxLength: 30 })} />
               </div>
-              <div className={[checkout.input, checkout.inputHalf].join(" ")} >
-                <p>Email Address</p>
-                <input type="mail" placeholder="alexei@mail.com" name="email" id="email" />
+              <div className={errors.mail ? [checkout.input2, checkout.inputHalf].join(" ") : [checkout.input, checkout.inputHalf].join(" ")} >
+                <span className={checkout.validations}>
+                  <p>Email Address</p>
+                  <p>
+                    {errors.mail && errors.mail.type === "required" &&"Required"}
+                    {errors.mail && errors.mail.type === "pattern" &&"Wrong format"}
+                  </p>
+                </span>
+                <input type="mail" placeholder="alexei@mail.com" name="email" id="email" {...register('mail', { required: true, pattern: /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/ })} />
               </div>
-            </div>
-            <div className={checkout.input}>
-              <p>Phone Number</p>
-              <input type="tel" placeholder="+1 202-555-0136" name="tel" id="tel" />
-            </div>
-            <h3>shipping info</h3>
-            <div className={checkout.input}>
-              <p>Address</p>
-              <input type="text" placeholder="1137 Williams Avenue" name="address" id="address" />
             </div>
             <div className={checkout.flex}>
-              <div className={[checkout.input, checkout.inputHalf].join(" ")} >
-                <p>ZIP Code</p>
-                <input type="text" placeholder="10001" name="zip" id="zip" />
-              </div>
-              <div className={[checkout.input, checkout.inputHalf].join(" ")} >
-                <p>City</p>
-                <input type="text" placeholder="New York" name="city" id="city" />
+              <div className={errors.tel ? [checkout.input2, checkout.inputHalf].join(" ") : [checkout.input, checkout.inputHalf].join(" ")} >
+                <span className={checkout.validations}>
+                  <p>Phone Number</p>
+                  <p>
+                    {errors.tel && errors.tel.type === "required" &&"Required"}
+                    {errors.tel && errors.tel.type === "pattern" &&"Wrong format"}
+                  </p>
+                </span>
+                <input type="tel" placeholder="2025550136" name="tel" id="tel" {...register('tel', {required: true, pattern: /^[0-9]/ })} />
               </div>
             </div>
-            <div className={checkout.input}>
-              <p>Country</p>
-              <input type="text" placeholder="United States" name="country" id="country" />
+            <h3>shipping info</h3>
+            <div className={checkout.flex}>
+              <div className={errors.address ? [checkout.input2, checkout.inputHalf].join(" ") : [checkout.input, checkout.inputHalf].join(" ")} >
+                <span className={checkout.validations}>
+                  <p>Address</p>
+                  <p>
+                    {errors.address && errors.address.type === "required" &&"Required"}
+                  </p>
+                </span>
+                <input type="text" placeholder="1137 Williams Avenue" name="address" id="address" {...register('address', {required: true })} />
+              </div>
+            </div>
+            <div className={checkout.flex}>
+              <div className={errors.zip ? [checkout.input2, checkout.inputHalf].join(" ") : [checkout.input, checkout.inputHalf].join(" ")} >
+                <span className={checkout.validations}>
+                  <p>ZIP Code</p>
+                  <p>
+                    {errors.zip && errors.zip.type === "required" &&"Required"}
+                    {errors.zip && errors.zip.type === "pattern" &&"Wrong format"}
+                  </p>
+                </span>
+                <input type="text" placeholder="10001" name="zip" id="zip" {...register('zip', { required: true, pattern: /^[0-9]/ })} />
+              </div>
+              <div className={errors.city ? [checkout.input2, checkout.inputHalf].join(" ") : [checkout.input, checkout.inputHalf].join(" ")} >
+                <span className={checkout.validations}>
+                  <p>City</p>
+                  <p>
+                    {errors.city && errors.city.type === "required" &&"Required"}
+                  </p>
+                </span>
+                <input type="text" placeholder="New York" name="city" id="city" {...register('city', {required: true })} />
+              </div>
+            </div>
+            <div className={checkout.flex}>
+              <div className={errors.country ? [checkout.input2, checkout.inputHalf].join(" ") : [checkout.input, checkout.inputHalf].join(" ")}>
+                <span className={checkout.validations}>
+                  <p>Country</p>
+                  <p>
+                    {errors.country && errors.country.type === "required" &&"Required"}
+                  </p>
+                </span>
+                <input type="text" placeholder="United States" name="country" id="country" {...register('country', {required: true })} />
+              </div>
             </div>
             <h3>payment details</h3>
             <div className={[checkout.input, checkout.flex].join(" ")}>
@@ -152,13 +205,25 @@ export default function CheckoutPage () {
             }
             {payment === 'emoney' &&
               <div className={checkout.flex}>
-                <div className={[checkout.input, checkout.inputHalf].join(" ")} >
-                  <p>e-Money Number</p>
-                  <input type="text" placeholder="238521993" name="emoney" id="emoney" />
+                <div className={errors.emoney ? [checkout.input2, checkout.inputHalf].join(" ") : [checkout.input, checkout.inputHalf].join(" ")} >
+                  <span className={checkout.validations}>
+                    <p>e-Money Number</p>
+                    <p>
+                      {errors.emoney && errors.emoney.type === "required" &&"Required"}
+                      {errors.emoney && errors.emoney.type === "pattern" &&"Wrong format"}
+                    </p>
+                  </span>
+                  <input type="text" placeholder="238521993" name="emoney" id="emoney" {...register('emoney', {required: true, pattern: /^[0-9]/ })}/>
                 </div>
-                <div className={[checkout.input, checkout.inputHalf].join(" ")} >
-                  <p>e-Money PIN</p>
-                  <input type="text" placeholder="6891" name="pin" id="pin" />
+                <div className={errors.pin ? [checkout.input2, checkout.inputHalf].join(" ") : [checkout.input, checkout.inputHalf].join(" ")} >
+                  <span className={checkout.validations}>
+                    <p>e-Money PIN</p>
+                    <p>
+                      {errors.pin && errors.pin.type === "required" &&"Required"}
+                      {errors.pin && errors.pin.type === "pattern" &&"Wrong format"}
+                    </p>
+                  </span>
+                  <input type="text" placeholder="6891" name="pin" id="pin" {...register('pin', {required: true, pattern: /^[0-9]/ })}/>
                 </div>
               </div>
             }
@@ -276,10 +341,10 @@ export default function CheckoutPage () {
               <p className={checkout.orange}>$ {grandTotal}</p>
             </div>
             <div className={checkout.pay}>
-              <button onClick={openModal}>CONTINUE & PAY</button>
+              <input type="submit" value="CONTINUE & PAY" />
             </div>
           </div>
-        </div>
+        </form>
       </section>
       <section className={checkout.confirmationWrapper} id="checkoutModal">
       {/* <section className={checkout.confirmationWrapper} onClick={closeModal} id="checkoutModal"> */}

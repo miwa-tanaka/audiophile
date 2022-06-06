@@ -51,11 +51,32 @@
       .input {
         padding: 15px 0;
 
-        p, label {
-          font-weight: 700;
-          font-size: 14px;
-          letter-spacing: -0.214286px;
-          margin: 0 0 10px 0;
+        .validations {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          p {
+            font-size: 14px;
+            letter-spacing: -0.214286px;
+            margin: 0 0 10px 0;
+
+            &:first-child {
+              font-weight: 700;
+            }
+
+            &:nth-child(2) {
+              font-weight: 500;
+              color: #CD2C2C;
+            }
+          }
+
+          p, label {
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: -0.214286px;
+            margin: 0 0 10px 0;
+          }
         }
 
         input {
@@ -65,6 +86,58 @@
           font-weight: 700;
           font-size: 14px;
           color: rgba(0, 0, 0, 0.4);
+
+          &:focus {
+            outline-color: $orange;
+            caret-color: $orange;
+          }
+        }
+      }
+
+      .input2 {
+        padding: 15px 0;
+
+        .validations {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          p {
+            font-size: 14px;
+            letter-spacing: -0.214286px;
+            margin: 0 0 10px 0;
+            color: #CD2C2C;
+
+            &:first-child {
+              font-weight: 700;
+            }
+
+            &:nth-child(2) {
+              font-weight: 500;
+              color: #CD2C2C;
+            }
+          }
+
+          p, label {
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: -0.214286px;
+            margin: 0 0 10px 0;
+          }
+        }
+
+        input {
+          padding: 15px 0 15px 20px;
+          border-radius: 8px;
+          border: 2px solid #CD2C2C;
+          font-weight: 700;
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.4);
+
+          &:focus {
+            outline-color: $orange;
+            caret-color: $orange;
+          }
         }
       }
 
@@ -237,7 +310,7 @@
       .pay {
         padding-top: 15px;
 
-        button {
+        input {
           width: 100%;
           background-color: $orange;
           border: 1px solid $orange;
