@@ -33,6 +33,11 @@ export default function CheckoutPage () {
   const [yx1count, setYx1] = useState(0);
   const [total, setTotal] = useState(0);
   const [grandTotal, setGrandTotal] = useState(0);
+  const [popupItemName, setPopupItemName] = useState();
+  const [popupItemPrice, setPopupItemPrice] = useState();
+  const [popupItemCount, setPopupItemCount] = useState(0);
+  const [popupTotaItems, setPopupTotaItems] = useState(0);
+  const [popupTotaItemsModal, setPopupTotaItemsModal] = useState(false);
 
   const [payment, setPayment] = useState('emoney');
 
@@ -49,7 +54,8 @@ export default function CheckoutPage () {
     setYx1(allItems.yx1.yx1count)
     const preTotal = allItems.price.totalamount.toLocaleString()
     setTotal(preTotal)
-    const preGrandTotal = allItems.price.totalamount + 50
+    const toNumber = parseFloat(allItems.price.totalamount.replace(/,/g, ""))
+    const preGrandTotal = toNumber + 50
     const grandTotal = preGrandTotal.toLocaleString()
     setGrandTotal(grandTotal)
 
@@ -61,6 +67,14 @@ export default function CheckoutPage () {
   const closeModal = () => {
     const modal = document.getElementById("checkoutModal")
     modal.style.display = "none"
+    localStorage.removeItem("allItems")
+    localStorage.removeItem("yx1")
+    localStorage.removeItem("xx59")
+    localStorage.removeItem("xx99I")
+    localStorage.removeItem("xx99II")
+    localStorage.removeItem("zx7")
+    localStorage.removeItem("zx9")
+    window.location.href = '/'
   }
 
   const paymentChecked = (event) => {
@@ -81,7 +95,62 @@ export default function CheckoutPage () {
   const onSubmit = data => {
     const modal = document.getElementById("checkoutModal")
     modal.style.display = "block"
-    console.log(data)
+    let itemCount = 0
+    if (markIIcount > 0) {
+      setPopupItemName('XX99 Mark II')
+      setPopupItemPrice('2,999')
+      setPopupItemCount(markIIcount)
+    } else if (markIcount > 0) {
+      setPopupItemName('XX99 Mark I')
+      setPopupItemPrice('1,750')
+      setPopupItemCount(markIcount)
+    } else if (xx59count > 0) {
+      setPopupItemName('XX59')
+      setPopupItemPrice('899')
+      setPopupItemCount(xx59count)
+    } else if (zx9count > 0) {
+      setPopupItemName('ZX9')
+      setPopupItemPrice('4,500')
+      setPopupItemCount(zx9count)
+    } else if (zx7count > 0) {
+      setPopupItemName('ZX7')
+      setPopupItemPrice('3,500')
+      setPopupItemCount(zx7count)
+    } else if (yx1count > 0) {
+      setPopupItemName('YX1')
+      setPopupItemPrice('599')
+      setPopupItemCount(yx1count)
+    }
+
+    if (markIIcount > 0) {
+      itemCount +=1
+    }
+    if (markIcount > 0) {
+      itemCount +=1
+    }
+    if (xx59count > 0) {
+      itemCount +=1
+    }
+    if (zx9count > 0) {
+      itemCount +=1
+    }
+    if (zx7count > 0) {
+      itemCount +=1
+    }
+    if (yx1count > 0) {
+      itemCount +=1
+    }
+
+    setPopupTotaItems(itemCount -1)
+  }
+
+  const orderdItemsDetails = () => {
+    if (popupTotaItemsModal) {
+      setPopupTotaItemsModal(false)
+
+    } else {
+      setPopupTotaItemsModal(true)
+    }
   }
 
   return (
@@ -356,25 +425,123 @@ export default function CheckoutPage () {
             <div className={checkout.ordersItems}>
               <div className={checkout.details}>
                 <div className={checkout.detailsImg}>
-                  <img src={yx1} alt="YX1" />
+                  {popupItemName === 'XX99 Mark II' &&
+                    <img src={markII} alt='XX99 Mark II' />
+                  }
+                  {popupItemName === 'XX99 Mark I' &&
+                    <img src={markI} alt='XX99 Mark I' />
+                  }
+                  {popupItemName === 'XX59' &&
+                    <img src={xx59} alt='XX59' />
+                  }
+                  {popupItemName === 'ZX9' &&
+                    <img src={zx9} alt='ZX9' />
+                  }
+                  {popupItemName === 'ZX7' &&
+                    <img src={zx7} alt='ZX7' />
+                  }
+                  {popupItemName === 'YX1' &&
+                    <img src={yx1} alt='YX1' />
+                  }
                 </div>
                 <div className={checkout.detailsName}>
-                  <p className={checkout.name}>YX1</p>
-                  <p className={checkout.price}>$</p>
+                  <p className={checkout.name}>{popupItemName}</p>
+                  <p className={checkout.price}>$ {popupItemPrice}</p>
                 </div>
                 <div className={checkout.detailsCount}>
-                  <p>x</p>
+                  <p>x{popupItemCount}</p>
                 </div>
               </div>
-              <div className={checkout.count2}>
-                <hr />
-                <p>and 2 other item(s)</p>
-              </div>
+              {popupTotaItems > 0 && popupTotaItemsModal &&
+                <div>
+                  {popupItemName !== 'XX99 Mark I' && markIcount > 0 &&
+                    <div className={checkout.details}>
+                      <div className={checkout.detailsImg}>
+                        <img src={markI} alt='XX99 Mark I' />
+                      </div>
+                      <div className={checkout.detailsName}>
+                        <p className={checkout.name}>XX99 Mark I</p>
+                        <p className={checkout.price}>$ 1,750</p>
+                      </div>
+                      <div className={checkout.detailsCount}>
+                        <p>x{markIcount}</p>
+                      </div>
+                    </div>
+                  }
+                  {popupItemName !== 'XX59' && xx59count > 0 &&
+                    <div className={checkout.details}>
+                      <div className={checkout.detailsImg}>
+                        <img src={xx59} alt="XX59" />
+                      </div>
+                      <div className={checkout.detailsName}>
+                        <p className={checkout.name}>XX59</p>
+                        <p className={checkout.price}>$ 899</p>
+                      </div>
+                      <div className={checkout.detailsCount}>
+                        <p>x{xx59count}</p>
+                      </div>
+                    </div>
+                  }
+                  {popupItemName !== 'ZX9' && zx9count > 0 &&
+                    <div className={checkout.details}>
+                      <div className={checkout.detailsImg}>
+                        <img src={zx9} alt="ZX9" />
+                      </div>
+                      <div className={checkout.detailsName}>
+                        <p className={checkout.name}>ZX9</p>
+                        <p className={checkout.price}>$ 4,500</p>
+                      </div>
+                      <div className={checkout.detailsCount}>
+                        <p>x{zx9count}</p>
+                      </div>
+                    </div>
+                  }
+                  {popupItemName !== 'ZX7' && zx7count > 0 &&
+                    <div className={checkout.details}>
+                      <div className={checkout.detailsImg}>
+                        <img src={zx7} alt="ZX7" />
+                      </div>
+                      <div className={checkout.detailsName}>
+                        <p className={checkout.name}>ZX7</p>
+                        <p className={checkout.price}>$ 3,500</p>
+                      </div>
+                      <div className={checkout.detailsCount}>
+                        <p>x{zx7count}</p>
+                      </div>
+                    </div>
+                  }
+                  {popupItemName !== 'YX1' && yx1count > 0 &&
+                    <div className={checkout.details}>
+                      <div className={checkout.detailsImg}>
+                        <img src={yx1} alt="YX1" />
+                      </div>
+                      <div className={checkout.detailsName}>
+                        <p className={checkout.name}>YX1</p>
+                        <p className={checkout.price}>$ 599</p>
+                      </div>
+                      <div className={checkout.detailsCount}>
+                        <p>x{yx1count}</p>
+                      </div>
+                    </div>
+                  }
+                </div>
+              }
+              {popupTotaItems > 0 &&
+                <div className={checkout.count2}>
+                  <hr />
+                  {popupTotaItemsModal&&
+                    <button onClick={orderdItemsDetails}>View less</button>
+                  }
+                  {!popupTotaItemsModal &&
+                    <button onClick={orderdItemsDetails}>and {popupTotaItems} other item(s)</button>
+                  }
+                </div>
+              }
             </div>
             <div className={checkout.ordersTotalWrapper}>
               <div className={checkout.ordersTotal}>
                 <p className={checkout.grandtotal}>GRAND TOTAL</p>
-                <p className={checkout.price}>$</p>
+                <p className={checkout.price}>$ {grandTotal}</p>
               </div>
             </div>
           </div>

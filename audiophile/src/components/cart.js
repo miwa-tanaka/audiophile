@@ -51,6 +51,11 @@ function Cart (props) {
 
       const allItemCount = JSON.parse(localStorage.getItem("allItems"))
       // debugger
+      if (allItemCount === undefined || allItemCount === null) {
+        // debugger
+        return false
+      }
+      // debugger
       // console.log(allItemCount)
       const yx1Info = JSON.parse(localStorage.getItem("yx1"))
       // debugger
@@ -164,8 +169,17 @@ function Cart (props) {
       // const totalZx9Price = 4500 * preZx9
       // const totalPrice = totalYx1Price + totalXx59Price + totalXx99IPrice + totalXx99IIPrice + totalZx7Price + totalZx9Price
       // debugger
-      const totalPrice = allItemCount.price.totalamount + yx1Price + xx59Price + xx99IPrice + xx99IIPrice + zx7Price + zx9Price
-      setTotalamount(totalPrice)
+      let toNumber = null
+      if (typeof allItemCount.price.totalamount  === 'string' || allItemCount.price.totalamount instanceof String) {
+        toNumber = parseFloat(allItemCount.price.totalamount.replace(/,/g, ""))
+      } else {
+        toNumber = allItemCount.price.totalamount
+      }
+      // debugger
+      const totalPrice = toNumber + yx1Price + xx59Price + xx99IPrice + xx99IIPrice + zx7Price + zx9Price
+      const preTotalPrice = totalPrice.toLocaleString()
+      // debugger
+      setTotalamount(preTotalPrice)
     }
   }, [props.isdisplay])
 
@@ -237,6 +251,10 @@ function Cart (props) {
       // }
       // localStorage.setItem("allItems", JSON.stringify(allItemsCount))
     // }
+    // const preAllItemCount = parseFloat(itemcount.replace(/,/g, ""))
+    // console.log(preAllItemCount)
+    // console.log(itemcount)
+    // debugger
     const allItemsCount = {
       "all": {itemcount},
       "price": {totalamount},
@@ -259,7 +277,13 @@ function Cart (props) {
     if (markIIcount > 0) {
       setMarkIIcount(markIIcount - 1)
       setItemcount(itemcount - 1)
-      setTotalamount(totalamount - 2999)
+      const toNumber = parseFloat(totalamount.replace(/,/g, ""))
+      const preTotalPrice = toNumber - 2999
+      // debugger
+      // const preTotalPrice = totalamount - 2999
+      const totalPrice = preTotalPrice.toLocaleString()
+      setTotalamount(totalPrice)
+      // setTotalamount(totalamount - 2999)
       // allCount()
     }
   }
@@ -268,7 +292,12 @@ function Cart (props) {
     if (markIIcount < 100) {
       setMarkIIcount(markIIcount + 1)
       setItemcount(itemcount + 1)
-      setTotalamount(totalamount + 2999)
+      // const preTotalPrice = totalamount + 2999
+      const toNumber = parseFloat(totalamount.replace(/,/g, ""))
+      const preTotalPrice = toNumber + 2999
+      const totalPrice = preTotalPrice.toLocaleString()
+      setTotalamount(totalPrice)
+      // setTotalamount(totalamount + 2999)
       // allCount()
     }
   }
@@ -277,7 +306,12 @@ function Cart (props) {
     if (markIcount > 0) {
       setMarkIcount(markIcount - 1)
       setItemcount(itemcount - 1)
-      setTotalamount(totalamount - 1750)
+      // const preTotalPrice = totalamount - 1750
+      const toNumber = parseFloat(totalamount.replace(/,/g, ""))
+      const preTotalPrice = toNumber - 1750
+      const totalPrice = preTotalPrice.toLocaleString()
+      setTotalamount(totalPrice)
+      // setTotalamount(totalamount - 1750)
       // allCount()
     }
   }
@@ -286,7 +320,12 @@ function Cart (props) {
     if (markIcount < 100) {
       setMarkIcount(markIcount + 1)
       setItemcount(itemcount + 1)
-      setTotalamount(totalamount + 1750)
+      // const preTotalPrice = totalamount + 1750
+      const toNumber = parseFloat(totalamount.replace(/,/g, ""))
+      const preTotalPrice = toNumber + 1750
+      const totalPrice = preTotalPrice.toLocaleString()
+      setTotalamount(totalPrice)
+      // setTotalamount(totalamount + 1750)
       // allCount()
     }
   }
@@ -295,7 +334,12 @@ function Cart (props) {
     if (xx59count > 0) {
       setXx59(xx59count - 1)
       setItemcount(itemcount - 1)
-      setTotalamount(totalamount - 899)
+      // const preTotalPrice = totalamount - 899
+      const toNumber = parseFloat(totalamount.replace(/,/g, ""))
+      const preTotalPrice = toNumber - 899
+      const totalPrice = preTotalPrice.toLocaleString()
+      setTotalamount(totalPrice)
+      // setTotalamount(totalamount - 899)
       // allCount()
     }
   }
@@ -304,7 +348,12 @@ function Cart (props) {
     if (xx59count < 100) {
       setXx59(xx59count + 1)
       setItemcount(itemcount + 1)
-      setTotalamount(totalamount + 899)
+      // const preTotalPrice = totalamount + 899
+      const toNumber = parseFloat(totalamount.replace(/,/g, ""))
+      const preTotalPrice = toNumber + 899
+      const totalPrice = preTotalPrice.toLocaleString()
+      setTotalamount(totalPrice)
+      // setTotalamount(totalamount + 899)
       // allCount()
     }
   }
@@ -313,7 +362,12 @@ function Cart (props) {
     if (zx9count > 0) {
       setZx9(zx9count - 1)
       setItemcount(itemcount - 1)
-      setTotalamount(totalamount - 4500)
+      // const preTotalPrice = totalamount - 4500
+      const toNumber = parseFloat(totalamount.replace(/,/g, ""))
+      const preTotalPrice = toNumber - 4500
+      const totalPrice = preTotalPrice.toLocaleString()
+      setTotalamount(totalPrice)
+      // setTotalamount(totalamount - 4500)
       // allCount()
     }
   }
@@ -322,7 +376,12 @@ function Cart (props) {
     if (zx9count < 100) {
       setZx9(zx9count + 1)
       setItemcount(itemcount + 1)
-      setTotalamount(totalamount + 4500)
+      // const preTotalPrice = totalamount + 4500
+      const toNumber = parseFloat(totalamount.replace(/,/g, ""))
+      const preTotalPrice = toNumber + 4500
+      const totalPrice = preTotalPrice.toLocaleString()
+      setTotalamount(totalPrice)
+      // setTotalamount(totalamount + 4500)
       // allCount()
     }
   }
@@ -331,7 +390,12 @@ function Cart (props) {
     if (zx7count > 0) {
       setZx7(zx7count - 1)
       setItemcount(itemcount - 1)
-      setTotalamount(totalamount - 3500)
+      // const preTotalPrice = totalamount - 3500
+      const toNumber = parseFloat(totalamount.replace(/,/g, ""))
+      const preTotalPrice = toNumber - 3500
+      const totalPrice = preTotalPrice.toLocaleString()
+      setTotalamount(totalPrice)
+      // setTotalamount(totalamount - 3500)
       // allCount()
     }
   }
@@ -340,7 +404,12 @@ function Cart (props) {
     if (zx7count < 100) {
       setZx7(zx7count + 1)
       setItemcount(itemcount + 1)
-      setTotalamount(totalamount + 3500)
+      // const preTotalPrice = totalamount + 3500
+      const toNumber = parseFloat(totalamount.replace(/,/g, ""))
+      const preTotalPrice = toNumber + 3500
+      const totalPrice = preTotalPrice.toLocaleString()
+      setTotalamount(totalPrice)
+      // setTotalamount(totalamount + 3500)
       // allCount()
     }
   }
@@ -349,7 +418,12 @@ function Cart (props) {
     if (yx1count > 0) {
       setYx1(yx1count - 1)
       setItemcount(itemcount - 1)
-      setTotalamount(totalamount - 599)
+      // const preTotalPrice = totalamount - 599
+      const toNumber = parseFloat(totalamount.replace(/,/g, ""))
+      const preTotalPrice = toNumber - 599
+      const totalPrice = preTotalPrice.toLocaleString()
+      setTotalamount(totalPrice)
+      // setTotalamount(totalamount - 599)
       // allCount()
     }
   }
@@ -358,7 +432,12 @@ function Cart (props) {
     if (yx1count < 100) {
       setYx1(yx1count + 1)
       setItemcount(itemcount + 1)
-      setTotalamount(totalamount + 599)
+      // const preTotalPrice = totalamount + 599
+      const toNumber = parseFloat(totalamount.replace(/,/g, ""))
+      const preTotalPrice = toNumber + 599
+      const totalPrice = preTotalPrice.toLocaleString()
+      setTotalamount(totalPrice)
+      // setTotalamount(totalamount + 599)
       // allCount()
     }
   }
