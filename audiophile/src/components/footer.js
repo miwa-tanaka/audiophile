@@ -10,7 +10,7 @@ const Footer = ({ siteTitle }) => (
     <div className="contentsWrappper">
       <div className="contents1">
         <div className="footerLogo">
-          <img src={audiophile} alt="audiophile logo" loading="lazy" />
+          <img src={audiophile} alt="audiophile logo" loading="lazy" width="143" height="25" />
         </div>
         <div>
           <ul className="links">

@@ -52,7 +52,7 @@ function Header () {
             </label>
           </div>
           <a href="/" className="logo">
-            <img src={audiophile} alt="audiophile logo" loading="lazy" />
+            <img src={audiophile} alt="audiophile logo" loading="lazy" width="143" height="25" />
           </a>
           <div className="linksWrapper">
             <ul className="links">
@@ -96,7 +96,7 @@ function Header () {
           <div className="modalItemsWrapper" onClick={(e) => e.stopPropagation()}>
             <div className="items">
               <div className="item">
-                <img src={headphones} alt="headphones" loading="lazy" />
+                <img src={headphones} alt="headphones" loading="lazy" width="124" height="160" />
                 <div className="itemLink">
                   <p>HEADPHONES</p>
                   <a href="/headphones/">
@@ -108,7 +108,7 @@ function Header () {
                 </div>
               </div>
               <div className="item">
-                <img src={speakers} alt="speakers" loading="lazy" />
+                <img src={speakers} alt="speakers" loading="lazy" width="123" height="147" />
                 <div className="itemLink">
                   <p>SPEAKERS</p>
                   <a href="/speakers/">
@@ -120,7 +120,7 @@ function Header () {
                 </div>
               </div>
               <div className="item">
-                <img src={earphones} alt="earphones" loading="lazy" />
+                <img src={earphones} alt="earphones" loading="lazy" width="125" height="126" />
                 <div className="itemLink">
                   <p>EARPHONES</p>
                   <a href="/earphones/">

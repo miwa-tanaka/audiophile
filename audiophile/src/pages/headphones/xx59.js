@@ -53,7 +53,7 @@ export default function Xx59 () {
         </div>
         <div className={styles.itemsWrapper}>
           <div className={styles.itemsImgs}>
-            <img src={xx59} alt="XX59 Headphones" loading="lazy" />
+            <img src={xx59} alt="XX59 Headphones" loading="lazy" width="511" height="530" />
           </div>
           <div className={styles.itemsTxts}>
             <h1>XX59 Headphones</h1>
@@ -121,34 +121,34 @@ export default function Xx59 () {
         </div>
         <div className={styles.dtlImgs}>
           <div className={styles.img1}>
-            <img src={bitmap10} alt="" loading="lazy" />
+            <img src={bitmap10} alt="" loading="lazy" width="453" height="290" />
           </div>
           <div className={styles.img3}>
-            <img src={bitmap9} alt="" loading="lazy" />
+            <img src={bitmap9} alt="" loading="lazy" width="453" height="290" />
           </div>
           <div className={styles.img2}>
-            <img src={bitmap8} alt="" loading="lazy" />
+            <img src={bitmap8} alt="" loading="lazy" width="560" height="590" />
           </div>
         </div>
         <div className={styles.recommendation}>
           <h3>you may also like</h3>
           <div className={styles.products}>
             <div className={styles.product}>
-              <img src={xx992} alt="" loading="lazy" />
+              <img src={xx992} alt="" loading="lazy" width="320" height="332" />
               <h4>XX99 MARK II</h4>
               <div className={styles.url}>
                 <a href="/headphones/xx99-markII/">SEE PRODUCT</a>
               </div>
             </div>
             <div className={styles.product}>
-              <img src={xx99} alt="" loading="lazy" />
+              <img src={xx99} alt="" loading="lazy" width="320" height="332" />
               <h4>XX99 MARK I</h4>
               <div className={styles.url}>
                 <a href="/headphones/xx99-markI/">SEE PRODUCT</a>
               </div>
             </div>
             <div className={styles.product}>
-              <img src={zx9} alt="" loading="lazy" />
+              <img src={zx9} alt="" loading="lazy" width="320" height="332" />
               <h4>ZX9 SPEAKER</h4>
               <div className={styles.url}>
                 <a href="/speakers/zx9/">SEE PRODUCT</a>

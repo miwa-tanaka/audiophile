@@ -11,7 +11,7 @@ const Items = ({ siteTitle }) => (
   <div className={items.itemsWrapper}>
     <div className={items.items}>
       <div className={items.item}>
-        <img src={headphones} alt="headphones" loading="lazy" />
+        <img src={headphones} alt="headphones" loading="lazy" width="124" height="160" />
         <div className={items.itemLink}>
           <p>HEADPHONES</p>
           <a href="/headphones/">
@@ -23,7 +23,7 @@ const Items = ({ siteTitle }) => (
         </div>
       </div>
       <div className={items.item}>
-        <img src={speakers} alt="speakers" loading="lazy" />
+        <img src={speakers} alt="speakers" loading="lazy" width="123" height="147" />
         <div className={items.itemLink}>
           <p>SPEAKERS</p>
           <a href="/speakers/">
@@ -35,7 +35,7 @@ const Items = ({ siteTitle }) => (
         </div>
       </div>
       <div className={items.item}>
-        <img src={earphones} alt="earphones" loading="lazy" />
+        <img src={earphones} alt="earphones" loading="lazy" width="125" height="126" />
         <div className={items.itemLink}>
           <p>EARPHONES</p>
           <a href="/earphones/">

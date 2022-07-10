@@ -20,8 +20,8 @@ const Feature = ({ siteTitle }) => (
       </p>
     </div>
     <div className={items.featureImg}>
-      <img className={items.sizeDesktop} src={Bitmap} alt="" loading="lazy" />
-      <img className={items.sizeTablet} src={BitmapTablet} alt="" loading="lazy" />
+      <img className={items.sizeDesktop} src={Bitmap} alt="" loading="lazy" width="456" height="496" />
+      <img className={items.sizeTablet} src={BitmapTablet} alt="" loading="lazy" width="655" height="290" />
     </div>
   </div>
 )
