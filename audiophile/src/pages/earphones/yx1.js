@@ -54,7 +54,7 @@ export default function Yx1 () {
           <a href="/earphones/">Go Back</a>
         </div>
         <div className={styles.itemsWrapper}>
-          <div>
+          <div className={styles.itemsImgs}>
             <img src={yz1} alt="YX1 WIRELESS EARPHONES" />
           </div>
           <div className={styles.itemsTxts}>
@@ -124,21 +124,15 @@ export default function Yx1 () {
           </div>
         </div>
         <div className={styles.dtlImgs}>
-          <table>
-            <tr>
-              <td>
-                <img src={bitmap13} alt="" />
-              </td>
-              <td rowSpan={2}>
-                <img src={bitmap12} alt="" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <img src={bitmap11} alt="" />
-              </td>
-            </tr>
-          </table>
+          <div className={styles.img1}>
+            <img src={bitmap13} alt="" />
+          </div>
+          <div className={styles.img3}>
+            <img src={bitmap11} alt="" />
+          </div>
+          <div className={styles.img2}>
+            <img src={bitmap12} alt="" />
+          </div>
         </div>
         <div className={styles.recommendation}>
           <h3>you may also like</h3>

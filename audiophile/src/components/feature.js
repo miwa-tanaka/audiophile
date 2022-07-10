@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import * as items from "../scss/_feature.module.scss"
 
 import Bitmap from "../images/products/Bitmap3.png"
+import BitmapTablet from "../images/products/Bitmap20.png"
 
 const Feature = ({ siteTitle }) => (
   <div className={items.featureWrapper}>
@@ -19,7 +20,8 @@ const Feature = ({ siteTitle }) => (
       </p>
     </div>
     <div className={items.featureImg}>
-      <img src={Bitmap} alt="" />
+      <img className={items.sizeDesktop} src={Bitmap} alt="" />
+      <img className={items.sizeTablet} src={BitmapTablet} alt="" />
     </div>
   </div>
 )

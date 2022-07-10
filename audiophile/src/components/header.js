@@ -7,21 +7,54 @@ import Cart from "../components/cart"
 import * as styles from "../scss/_header.scss"
 
 import audiophile from "../images/audiophile.png"
+import headphones from "../images/products/headphones.png"
+import speakers from "../images/products/speakers.png"
+import earphones from "../images/products/earphones.png"
+
 function Header () {
   const [isdisplay, setIsdisplay] = useState(false);
+  const [menuIsdisplay, setMenuIsdisplay] = useState(false);
 
   const addCart = () => {
     setIsdisplay(true)
+  }
+
+  const openMenu = () => {
+    if (menuIsdisplay) {
+      setMenuIsdisplay(false)
+    } else {
+      setMenuIsdisplay(true)
+
+    }
+  }
+
+  const closelMenu = () => {
+    const menuCheckbox = document.getElementsByName('menuCheckbox')
+    menuCheckbox[0].checked = false
+    setMenuIsdisplay(false)
   }
 
   return (
     <header>
       <nav>
         <div className="linkWrapper">
-          <a href="/">
+          <div className="hamMenu">
+            {/* <button onClick={openMenu}>
+              <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="16" height="3" fill="white"/>
+                <rect y="6" width="16" height="3" fill="white"/>
+                <rect y="12" width="16" height="3" fill="white"/>
+              </svg>
+            </button> */}
+            <input className="menuBtn" type="checkbox" name="menuCheckbox" id="menuBtn" onChange={openMenu}/>
+            <label className="menuIcon" htmlFor="menuBtn">
+              <span className="navicon"></span>
+            </label>
+          </div>
+          <a href="/" className="logo">
             <img src={audiophile} alt="audiophile logo" />
           </a>
-          <div>
+          <div className="linksWrapper">
             <ul className="links">
               <li>
                 <a href="/">
@@ -58,6 +91,50 @@ function Header () {
         </div>
       </nav>
       <Cart isdisplay={isdisplay} setIsdisplay={setIsdisplay} />
+      {menuIsdisplay &&
+        <div className="modalMenu" onClick={closelMenu}>
+          <div className="modalItemsWrapper" onClick={(e) => e.stopPropagation()}>
+            <div className="items">
+              <div className="item">
+                <img src={headphones} alt="headphones" />
+                <div className="itemLink">
+                  <p>HEADPHONES</p>
+                  <a href="/headphones/">
+                    SHOP
+                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" strokeWidth="2"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div className="item">
+                <img src={speakers} alt="speakers" />
+                <div className="itemLink">
+                  <p>SPEAKERS</p>
+                  <a href="/speakers/">
+                    SHOP
+                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" strokeWidth="2"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div className="item">
+                <img src={earphones} alt="earphones" />
+                <div className="itemLink">
+                  <p>EARPHONES</p>
+                  <a href="/earphones/">
+                    SHOP
+                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" strokeWidth="2"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
     </header>
   )
 }

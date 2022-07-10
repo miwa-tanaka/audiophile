@@ -52,7 +52,7 @@ export default function Zx7 () {
           <a href="/speakers/">Go Back</a>
         </div>
         <div className={styles.itemsWrapper}>
-          <div>
+          <div className={styles.itemsImgs}>
             <img src={zx7} alt="ZX7 SPEAKER" />
           </div>
           <div className={styles.itemsTxts}>
@@ -121,21 +121,15 @@ export default function Zx7 () {
           </div>
         </div>
         <div className={styles.dtlImgs}>
-          <table>
-            <tr>
-              <td>
-                <img src={bitmap19} alt="" />
-              </td>
-              <td rowSpan={2}>
-                <img src={bitmap17} alt="" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <img src={bitmap18} alt="" />
-              </td>
-            </tr>
-          </table>
+          <div className={styles.img1}>
+            <img src={bitmap19} alt="" />
+          </div>
+          <div className={styles.img3}>
+            <img src={bitmap18} alt="" />
+          </div>
+          <div className={styles.img2}>
+            <img src={bitmap17} alt="" />
+          </div>
         </div>
         <div className={styles.recommendation}>
           <h3>you may also like</h3>

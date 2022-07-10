@@ -12,6 +12,10 @@ import xx99 from "../images/products/xx99-markII.png"
 import zx9 from "../images/products/zx9.png"
 import yx1 from "../images/products/yx1-earphones.png"
 
+import zx7 from "../images/products/zx7-speaker.png"
+import zx7Tablet from "../images/products/zx7-speaker-tablet.png"
+import zx7Sp from "../images/products/zx7-speaker-sp.png"
+
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
@@ -45,6 +49,9 @@ const IndexPage = () => (
         </div>
       </div>
       <div className={styles.zx7}>
+        <img className={styles.zx7bg1} src={zx7} alt="ZX7 SPEAKER" />
+        <img className={styles.zx7bg2} src={zx7Tablet} alt="ZX7 SPEAKER" />
+        <img className={styles.zx7bg3} src={zx7Sp} alt="ZX7 SPEAKER" />
         <div className={styles.zx7Txt}>
           <h3>ZX7 SPEAKER</h3>
           <div className={styles.zx7Link}>
@@ -57,9 +64,11 @@ const IndexPage = () => (
           <img src={yx1} alt="YX1 EARPHONES" />
         </div>
         <div className={styles.yx1Txt}>
-          <h3>YX1 EARPHONES</h3>
-          <div className={styles.yx1Link}>
-            <a href="/earphones/yx1/">SEE PRODUCT</a>
+          <div className={styles.yx1TxtPosition}>
+            <h3>YX1 EARPHONES</h3>
+            <div className={styles.yx1Link}>
+              <a href="/earphones/yx1/">SEE PRODUCT</a>
+            </div>
           </div>
         </div>
       </div>

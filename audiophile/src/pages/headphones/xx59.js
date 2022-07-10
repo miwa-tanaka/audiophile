@@ -52,7 +52,7 @@ export default function Xx59 () {
           <a href="/headphones/">Go Back</a>
         </div>
         <div className={styles.itemsWrapper}>
-          <div>
+          <div className={styles.itemsImgs}>
             <img src={xx59} alt="XX59 Headphones" />
           </div>
           <div className={styles.itemsTxts}>
@@ -120,21 +120,15 @@ export default function Xx59 () {
           </div>
         </div>
         <div className={styles.dtlImgs}>
-          <table>
-            <tr>
-              <td>
-                <img src={bitmap10} alt="" />
-              </td>
-              <td rowSpan={2}>
-                <img src={bitmap8} alt="" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <img src={bitmap9} alt="" />
-              </td>
-            </tr>
-          </table>
+          <div className={styles.img1}>
+            <img src={bitmap10} alt="" />
+          </div>
+          <div className={styles.img3}>
+            <img src={bitmap9} alt="" />
+          </div>
+          <div className={styles.img2}>
+            <img src={bitmap8} alt="" />
+          </div>
         </div>
         <div className={styles.recommendation}>
           <h3>you may also like</h3>

@@ -26,6 +26,10 @@
     display: flex;
     justify-content: space-between;
 
+    @media screen and (max-width:768px) {
+      flex-direction: column;
+    }
+
     .checkout {
       background-color: $white;
       width: 65%;
@@ -33,10 +37,21 @@
       border-radius: 10px;
       padding: 55px 45px;
 
+      @media screen and (max-width:768px) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+        padding: 30px;
+      }
+
       h1 {
         font-weight: 700;
         font-size: 32px;
         letter-spacing: 1.14286px;
+
+        @media screen and (max-width:576px) {
+          font-size: 28px;
+        }
       }
 
       h3 {
@@ -146,8 +161,20 @@
         justify-content: space-between;
         // align-items: center;
 
+        @media screen and (max-width:768px) {
+          flex-direction: column;
+        }
+
         .inputHalf {
           width: 48%;
+
+          @media screen and (max-width:768px) {
+            width: 60%;
+          }
+
+          @media screen and (max-width:576px) {
+            width: 100%;
+          }
 
           input {
             width: 100%;
@@ -159,6 +186,15 @@
           border-radius: 8px;
           width: 300px;
           margin-bottom: 16px;
+
+          @media screen and (max-width:768px) {
+            width: 60%;
+          }
+
+          @media screen and (max-width:576px) {
+            width: 100%;
+          }
+
 
           input[type='radio']:after {
             width: 15px;
@@ -226,10 +262,19 @@
       padding: 45px 25px;
       align-self: baseline;
 
+      @media screen and (max-width:768px) {
+        width: 100%;
+        padding: 30px;
+      }
+
       h2 {
         font-weight: 700;
         font-size: 18px;
         letter-spacing: 1.28571px;
+
+        @media screen and (max-width:768px) {
+          margin: 0;
+        }
       }
 
 
@@ -242,16 +287,33 @@
           align-items: center;
           padding: 10px 0;
 
+          // @media screen and (max-width:768px) {
+          //   justify-content: align-self;
+          // }
+
           .itemImg {
+            width: 30%;
+
+            @media screen and (max-width:768px) {
+              width: 20%;
+            }
+
             img {
-              width: 100px;
+              width: 100%;
+              max-width: 100px;
               border-radius: 15px;
             }
           }
 
           .itemTxt {
             width: 25%;
-            margin-left: -120px;
+            // margin-left: -120px;
+            margin-left: 20px;
+
+            @media screen and (max-width:768px) {
+              width: 40%;
+              // margin-left: 20px;
+            }
 
             .name {
               font-weight: 700;
@@ -268,10 +330,15 @@
           }
 
           .counter {
+            margin-left: auto;
             // display: flex;
             // align-items: center;
             // background-color: $grey;
             // padding: 15px;
+
+            // @media screen and (max-width:768px) {
+            //   margin-left: auto;
+            // }
 
             span {
               color: rgba(0, 0, 0, 0.5);
@@ -308,6 +375,9 @@
       }
 
       .pay {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
         padding-top: 15px;
 
         input {
@@ -315,7 +385,8 @@
           background-color: $orange;
           border: 1px solid $orange;
           color: $white;
-          padding: 15px 55px;
+          // padding: 15px 55px;
+          padding: 15px 0;
           font-weight: 700;
           font-size: 13px;
           text-align: center;
@@ -332,11 +403,11 @@
   }
 }
 
-.confirmation{
+.confirmation {
   &Wrapper {
     position: fixed;
     // position: relative;
-    z-index: 1;
+    z-index: 100;
     left: 0;
     top: 0;
     width: 100%;
@@ -346,22 +417,39 @@
   }
 
   &Content {
+
+    // background-color: #fff;
+    // width: 65%;
+    // max-width: 450px;
+    // border-radius: 10px;
+    margin: 100px auto 40px auto;
+    // overflow: scroll;
     background-color: $white;
-    width: 50%;
+    width: 90%;
+    max-width: 700px;
     overflow: scroll;
     // height: auto;
-    max-height: 95vh;
+    max-height: 80vh;
     padding: 45px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translateY(-50%) translateX(-50%);
     border-radius: 10px;
+
+    @media screen and (max-width:768px) {
+      // margin: 0;
+      padding: 30px;
+    }
 
     h1 {
       font-weight: 700;
       font-size: 32px;
       letter-spacing: 1.14286px;
+
+      @media screen and (max-width:768px) {
+        font-size: 24px;
+      }
     }
 
     .msg {
@@ -374,6 +462,10 @@
       display: flex;
       justify-content: space-between;
 
+      @media screen and (max-width:768px) {
+        flex-direction: column;
+      }
+
       .ordersItems {
         width: 50%;
         // display: flex;
@@ -382,13 +474,23 @@
         padding: 24px;
         border-radius: 7px 0 0 7px;
 
+        @media screen and (max-width:768px) {
+          width: 100%;
+          border-radius: 7px 7px 0 0;
+        }
+
         .details {
           display: flex;
           justify-content: space-between;
+          align-items: center;
           padding-bottom: 10px;
 
           &Img {
             width: 80px;
+
+            @media screen and (max-width:576px) {
+              width: 50px;
+            }
 
             img {
               width: 100%;
@@ -398,6 +500,14 @@
 
           &Name {
             width: 45%;
+
+            @media screen and (max-width:768px) {
+              margin-left: 20px;
+            }
+
+            @media screen and (max-width:576px) {
+              margin-left: 10px;
+            }
 
             .name {
               margin: 0;
@@ -414,6 +524,12 @@
           }
 
           &Count {
+            @media screen and (max-width:768px) {
+              margin-left: auto;
+              // position: inherit;
+              // transform: none;
+            }
+
             p {
               font-weight: 700;
               font-size: 15px;
@@ -457,6 +573,12 @@
         border-radius: 0 7px 7px 0;
         position: relative;
 
+        @media screen and (max-width:768px) {
+          width: 100%;
+          position: inherit;
+          border-radius: 0 0 7px 7px;
+        }
+
         .ordersTotal {
           padding-left: 32px;
           position: absolute;
@@ -464,6 +586,12 @@
           bottom: 0;
           left: 0;
           transform: translateY(-50%);
+
+          @media screen and (max-width:768px) {
+            position: inherit;
+            transform: none;
+            padding-left: 24px;
+          }
 
           .grandtotal {
             font-weight: 500;

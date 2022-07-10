@@ -1,10 +1,33 @@
 @import "./variables";
 
 .productImg {
-  max-width: 50%;
+  width: 50%;
+
+  @media screen and (max-width:768px) {
+    width: 70%;
+  }
+
+  @media screen and (max-width:576px) {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
 }
 
 .productTxt {
+  width: 50%;
+
+  @media screen and (max-width:768px) {
+    width: 80%;
+    text-align: center;
+  }
+
+  @media screen and (max-width:576px) {
+    width: 100%;
+  }
+
   span {
     font-weight: 400;
     font-size: 14px;
@@ -21,6 +44,10 @@
     text-transform: uppercase;
     color: $black;
     margin: 16px 0 40px 0;
+
+    @media screen and (max-width:576px) {
+      font-size: 28px;
+    }
   }
 
   p {

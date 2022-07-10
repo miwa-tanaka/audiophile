@@ -35,7 +35,7 @@ const IndexPage = () => (
           </div>
         </div>
       </div>
-      <div className="itemColumn">
+      <div className="itemColumn reverse">
         <div className={styles.productTxt}>
           <h2>XX99 Mark I Headphones</h2>
           <p>As the gold standard for headphones,

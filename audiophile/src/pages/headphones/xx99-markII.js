@@ -52,7 +52,7 @@ export default function Xx99II () {
           <a href="/headphones/">Go Back</a>
         </div>
         <div className={styles.itemsWrapper}>
-          <div>
+          <div className={styles.itemsImgs}>
             <img src={xx99} alt="XX99 Mark II Headphones" />
           </div>
           <div className={styles.itemsTxts}>
@@ -125,21 +125,15 @@ export default function Xx99II () {
           </div>
         </div>
         <div className={styles.dtlImgs}>
-          <table>
-            <tr>
-              <td>
-                <img src={bitmap4} alt="" />
-              </td>
-              <td rowSpan={2}>
-                <img src={bitmap} alt="" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <img src={bitmap2} alt="" />
-              </td>
-            </tr>
-          </table>
+          <div className={styles.img1}>
+            <img src={bitmap4} alt="" />
+          </div>
+          <div className={styles.img3}>
+            <img src={bitmap2} alt="" />
+          </div>
+          <div className={styles.img2}>
+            <img src={bitmap} alt="" />
+          </div>
         </div>
         <div className={styles.recommendation}>
           <h3>you may also like</h3>

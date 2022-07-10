@@ -2,6 +2,9 @@
 
 header {
   background-color: $black2;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 
   nav {
     width: 90%;
@@ -15,25 +18,110 @@ header {
     align-items: center;
     justify-content: space-between;
 
-    .links {
-      margin: 0;
-      padding: 0;
-      display: flex;
+    .hamMenu {
+      display: none;
 
-      li {
-        list-style-type: none;
-        padding-right: 34px;
+      @media screen and (max-width:768px) {
+        display: block;
+      }
 
-        a {
-          text-decoration: none;
-          color: $white;
-          font-size: 13px;
-          font-weight: 700;
-          letter-spacing: 2px;
-          cursor: pointer;
+      // button {
+      //   cursor: pointer;
+      //   border: none;
+      //   background-color: transparent;
+      // }
+      .menuIcon {
+        cursor: pointer;
+        // display: inline-block;
+        // float: right;
+        padding: 0 25px;
+        position: relative;
+        user-select: none;
 
-          &:hover {
-            color: $orange;
+        .navicon {
+          background: $white;
+          display: block;
+          height: 3px;
+          position: relative;
+          transition: background .2s ease-out;
+          width: 18px;
+
+          &::before, &::after {
+            background: $white;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            width: 100%;
+          }
+
+          &::before {
+            top: 8px;
+          }
+
+          &::after {
+            top: -8px;
+          }
+        }
+      }
+
+      .menuBtn {
+        display: none;
+
+        &:checked {
+          & ~ .menuIcon .navicon {
+            background: transparent;
+
+            &::before {
+              transform: rotate(-45deg);
+              top:0;
+            }
+
+            &::after {
+              transform: rotate(45deg);
+              top:0;
+            }
+          }
+        }
+      }
+    }
+
+    .logo {
+      @media screen and (max-width:768px) {
+        margin-left: -50%;
+      }
+
+      @media screen and (max-width:576px) {
+        margin-left: 0;
+      }
+    }
+
+    .linksWrapper {
+      @media screen and (max-width:768px) {
+        display: none;
+      }
+
+      .links {
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        li {
+          list-style-type: none;
+          padding-right: 34px;
+
+          a {
+            text-decoration: none;
+            color: $white;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            cursor: pointer;
+
+            &:hover {
+              color: $orange;
+            }
           }
         }
       }
@@ -41,11 +129,103 @@ header {
 
     .cart {
       text-decoration: none;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
 
       &:hover {
         svg {
           path {
             fill: $orange;
+          }
+        }
+      }
+    }
+  }
+
+  .modalMenu {
+    // max-height: 0;
+    // display: none;
+    // background-color: $white;
+    position: fixed; /* Stay in place */
+    z-index: 0; /* Sit on top */
+    left: 0;
+    top: 95px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+    .modalItemsWrapper {
+      background-color: $white;
+      height: 350px;
+      // padding: 0 40px;
+      padding: 0 3%;
+
+      @media screen and (max-width:576px) {
+        height: 100%;
+        overflow: scroll;
+        padding-bottom: 20px;
+      }
+
+      .items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 100px;
+
+        @media screen and (max-width:576px) {
+          flex-direction: column;
+        }
+
+        .item {
+          width: calc(95% / 3);
+          position: relative;
+          background-color: $grey;
+          text-align: center;
+          border-radius: 8px;
+          height: 190px;
+
+          @media screen and (max-width:576px) {
+            width: 90%;
+            margin-bottom: 100px;
+          }
+
+          img {
+            margin-top: -80px;
+          }
+
+          .itemLink {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            p {
+              font-weight: 700;
+              font-size: 15px;
+              letter-spacing: 1.07143px;
+              color: $black;
+              margin: 0 0 13px 0;
+            }
+
+            a {
+              font-weight: 700;
+              font-size: 13px;
+              letter-spacing: 1px;
+              color: rgba(0, 0, 0, 0.5);
+              cursor: pointer;
+              text-decoration: none;
+
+              &:hover {
+                color: $orange;
+              }
+
+              svg {
+                margin-left: 12px;
+              }
+            }
           }
         }
       }

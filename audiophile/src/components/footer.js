@@ -9,7 +9,7 @@ const Footer = ({ siteTitle }) => (
   <footer>
     <div className="contentsWrappper">
       <div className="contents1">
-        <div>
+        <div className="footerLogo">
           <img src={audiophile} alt="audiophile logo" />
         </div>
         <div>
