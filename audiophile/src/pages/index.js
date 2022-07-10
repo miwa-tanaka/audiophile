@@ -30,7 +30,7 @@ const IndexPage = () => (
           </div>
         </div>
         <div className={styles.newItemImg}>
-          <img src={xx99} alt="XX99 Mark II HeadphoneS" />
+          <img src={xx99} alt="XX99 Mark II HeadphoneS" loading="lazy" />
         </div>
       </div>
     </section>
@@ -38,7 +38,7 @@ const IndexPage = () => (
       <Items />
       <div className={styles.zx9}>
         <div className={styles.zx9Img}>
-          <img src={zx9} alt="ZX9 SPEAKER" />
+          <img src={zx9} alt="ZX9 SPEAKER" loading="lazy" />
         </div>
         <div className={styles.zx9Txt}>
           <h2>ZX9 <br /> SPEAKER</h2>
@@ -49,9 +49,9 @@ const IndexPage = () => (
         </div>
       </div>
       <div className={styles.zx7}>
-        <img className={styles.zx7bg1} src={zx7} alt="ZX7 SPEAKER" />
-        <img className={styles.zx7bg2} src={zx7Tablet} alt="ZX7 SPEAKER" />
-        <img className={styles.zx7bg3} src={zx7Sp} alt="ZX7 SPEAKER" />
+        <img className={styles.zx7bg1} src={zx7} alt="ZX7 SPEAKER" loading="lazy" />
+        <img className={styles.zx7bg2} src={zx7Tablet} alt="ZX7 SPEAKER" loading="lazy" />
+        <img className={styles.zx7bg3} src={zx7Sp} alt="ZX7 SPEAKER" loading="lazy" />
         <div className={styles.zx7Txt}>
           <h3>ZX7 SPEAKER</h3>
           <div className={styles.zx7Link}>
@@ -61,7 +61,7 @@ const IndexPage = () => (
       </div>
       <div className={styles.yx1}>
         <div className={styles.yx1Img}>
-          <img src={yx1} alt="YX1 EARPHONES" />
+          <img src={yx1} alt="YX1 EARPHONES" loading="lazy" />
         </div>
         <div className={styles.yx1Txt}>
           <div className={styles.yx1TxtPosition}>

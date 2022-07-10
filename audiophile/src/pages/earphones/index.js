@@ -19,7 +19,7 @@ const IndexPage = () => (
     <section className="pageWidth">
       <div className="itemColumn">
         <div className={styles.productImg}>
-          <img src={yz1} alt="YX1 WIRELESS EARPHONES" />
+          <img src={yz1} alt="YX1 WIRELESS EARPHONES" loading="lazy" />
         </div>
         <div className={styles.productTxt}>
           <span>NEW PRODUCT</span>

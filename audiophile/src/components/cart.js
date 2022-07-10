@@ -511,7 +511,7 @@ function Cart (props) {
             {markIIcount > 0 &&
               <div className={cart.itemList}>
                 <div className={cart.itemImg}>
-                  <img src={markII} alt="XX99 Mark II" />
+                  <img src={markII} alt="XX99 Mark II" loading="lazy" />
                 </div>
                 <div className={cart.itemTxt}>
                   <p className={cart.name}>XX99 Mark II</p>
@@ -530,7 +530,7 @@ function Cart (props) {
             {markIcount > 0 &&
               <div className={cart.itemList}>
                 <div className={cart.itemImg}>
-                  <img src={markI} alt="XX99 Mark I" />
+                  <img src={markI} alt="XX99 Mark I" loading="lazy" />
                 </div>
                 <div className={cart.itemTxt}>
                   <p className={cart.name}>XX99 Mark I</p>
@@ -549,7 +549,7 @@ function Cart (props) {
             {xx59count > 0 &&
               <div className={cart.itemList}>
                 <div className={cart.itemImg}>
-                  <img src={xx59} alt="XX59" />
+                  <img src={xx59} alt="XX59" loading="lazy" />
                 </div>
                 <div className={cart.itemTxt}>
                   <p className={cart.name}>XX59</p>
@@ -568,7 +568,7 @@ function Cart (props) {
             {zx9count > 0 &&
               <div className={cart.itemList}>
                 <div className={cart.itemImg}>
-                  <img src={zx9} alt="ZX9" />
+                  <img src={zx9} alt="ZX9" loading="lazy" />
                 </div>
                 <div className={cart.itemTxt}>
                   <p className={cart.name}>ZX9</p>
@@ -587,7 +587,7 @@ function Cart (props) {
             {zx7count > 0 &&
               <div className={cart.itemList}>
                 <div className={cart.itemImg}>
-                  <img src={zx7} alt="ZX7" />
+                  <img src={zx7} alt="ZX7" loading="lazy" />
                 </div>
                 <div className={cart.itemTxt}>
                   <p className={cart.name}>ZX7</p>
@@ -606,7 +606,7 @@ function Cart (props) {
             {yx1count > 0 &&
               <div className={cart.itemList}>
                 <div className={cart.itemImg}>
-                  <img src={yx1} alt="YX1" />
+                  <img src={yx1} alt="YX1" loading="lazy" />
                 </div>
                 <div className={cart.itemTxt}>
                   <p className={cart.name}>YX1</p>

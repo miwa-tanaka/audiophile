@@ -21,7 +21,7 @@ const IndexPage = () => (
     <section className="pageWidth">
       <div className="itemColumn">
         <div className={styles.productImg}>
-          <img src={mark2} alt="XX99 Mark II Headphones" />
+          <img src={mark2} alt="XX99 Mark II Headphones" loading="lazy" />
         </div>
         <div className={styles.productTxt}>
           <span>NEW PRODUCT</span>
@@ -48,12 +48,12 @@ const IndexPage = () => (
           </div>
         </div>
         <div className={styles.productImg}>
-          <img src={mark1} alt="XX99 Mark I Headphones" />
+          <img src={mark1} alt="XX99 Mark I Headphones" loading="lazy" />
         </div>
       </div>
       <div className="itemColumn">
         <div className={styles.productImg}>
-          <img src={xx59} alt="XX59 Headphones" />
+          <img src={xx59} alt="XX59 Headphones" loading="lazy" />
         </div>
         <div className={styles.productTxt}>
           <h2>XX59 Headphones</h2>

@@ -53,7 +53,7 @@ export default function Zx9 () {
         </div>
         <div className={styles.itemsWrapper}>
           <div className={styles.itemsImgs}>
-            <img src={zx9} alt="ZX9 SPEAKER" />
+            <img src={zx9} alt="ZX9 SPEAKER" loading="lazy" />
           </div>
           <div className={styles.itemsTxts}>
             <p className={styles.newSign}>NEW PRODUCT</p>
@@ -123,34 +123,34 @@ export default function Zx9 () {
         </div>
         <div className={styles.dtlImgs}>
           <div className={styles.img1}>
-            <img src={bitmap16} alt="" />
+            <img src={bitmap16} alt="" loading="lazy" />
           </div>
           <div className={styles.img3}>
-            <img src={bitmap15} alt="" />
+            <img src={bitmap15} alt="" loading="lazy" />
           </div>
           <div className={styles.img2}>
-            <img src={bitmap14} alt="" />
+            <img src={bitmap14} alt="" loading="lazy" />
           </div>
         </div>
         <div className={styles.recommendation}>
           <h3>you may also like</h3>
           <div className={styles.products}>
             <div className={styles.product}>
-              <img src={zx7} alt="" />
+              <img src={zx7} alt="" loading="lazy" />
               <h4>ZX7 SPEAKER</h4>
               <div className={styles.url}>
                 <a href="/speakers/zx7/">SEE PRODUCT</a>
               </div>
             </div>
             <div className={styles.product}>
-              <img src={xx99i} alt="" />
+              <img src={xx99i} alt="" loading="lazy" />
               <h4>XX99 MARK I</h4>
               <div className={styles.url}>
                 <a href="/headphones/xx99-markI/">SEE PRODUCT</a>
               </div>
             </div>
             <div className={styles.product}>
-              <img src={xx59} alt="" />
+              <img src={xx59} alt="" loading="lazy" />
               <h4>XX59</h4>
               <div className={styles.url}>
                 <a href="/headphones/xx59/">SEE PRODUCT</a>

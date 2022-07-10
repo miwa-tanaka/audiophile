@@ -53,7 +53,7 @@ export default function Xx99I () {
         </div>
         <div className={styles.itemsWrapper}>
           <div className={styles.itemsImgs}>
-            <img src={xx99} alt="XX99 Mark I Headphones" />
+            <img src={xx99} alt="XX99 Mark I Headphones" loading="lazy" />
           </div>
           <div className={styles.itemsTxts}>
             <h1>XX99 Mark I Headphones</h1>
@@ -120,34 +120,34 @@ export default function Xx99I () {
         </div>
         <div className={styles.dtlImgs}>
           <div className={styles.img1}>
-            <img src={bitmap6} alt="" />
+            <img src={bitmap6} alt="" loading="lazy" />
           </div>
           <div className={styles.img3}>
-            <img src={bitmap5} alt="" />
+            <img src={bitmap5} alt="" loading="lazy" />
           </div>
           <div className={styles.img2}>
-            <img src={bitmap7} alt="" />
+            <img src={bitmap7} alt="" loading="lazy" />
           </div>
         </div>
         <div className={styles.recommendation}>
           <h3>you may also like</h3>
           <div className={styles.products}>
             <div className={styles.product}>
-              <img src={xx992} alt="" />
+              <img src={xx992} alt="" loading="lazy" />
               <h4>XX99 MARK II</h4>
               <div className={styles.url}>
                 <a href="/headphones/xx99-markII/">SEE PRODUCT</a>
               </div>
             </div>
             <div className={styles.product}>
-              <img src={xx59} alt="" />
+              <img src={xx59} alt="" loading="lazy" />
               <h4>XX59</h4>
               <div className={styles.url}>
                 <a href="/headphones/xx59/">SEE PRODUCT</a>
               </div>
             </div>
             <div className={styles.product}>
-              <img src={zx9} alt="" />
+              <img src={zx9} alt="" loading="lazy" />
               <h4>ZX9 SPEAKER</h4>
               <div className={styles.url}>
                 <a href="/speakers/zx9/">SEE PRODUCT</a>

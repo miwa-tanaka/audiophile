@@ -264,7 +264,7 @@ export default function CheckoutPage () {
             </div>
             {payment === 'cash' &&
               <div className={[checkout.flex, checkout.cashMsg].join(" ")}>
-                <img src={card} alt="" />
+                <img src={card} alt="" loading="lazy" />
                 <p>
                   The ‘Cash on Delivery’ option enables you to pay in cash when our
                   delivery courier arrives at your residence. <br />
@@ -303,7 +303,7 @@ export default function CheckoutPage () {
               {markIIcount > 0 &&
                 <div className={checkout.itemList}>
                   <div className={checkout.itemImg}>
-                    <img src={markII} alt="XX99 Mark II" />
+                    <img src={markII} alt="XX99 Mark II" loading="lazy" />
                   </div>
                   <div className={checkout.itemTxt}>
                     <p className={checkout.name}>XX99 Mark II</p>
@@ -319,7 +319,7 @@ export default function CheckoutPage () {
               {markIcount > 0 &&
                 <div className={checkout.itemList}>
                   <div className={checkout.itemImg}>
-                    <img src={markI} alt="XX99 Mark I" />
+                    <img src={markI} alt="XX99 Mark I" loading="lazy" />
                   </div>
                   <div className={checkout.itemTxt}>
                     <p className={checkout.name}>XX99 Mark I</p>
@@ -335,7 +335,7 @@ export default function CheckoutPage () {
               {xx59count > 0 &&
                 <div className={checkout.itemList}>
                   <div className={checkout.itemImg}>
-                    <img src={xx59} alt="XX59" />
+                    <img src={xx59} alt="XX59" loading="lazy" />
                   </div>
                   <div className={checkout.itemTxt}>
                     <p className={checkout.name}>XX59</p>
@@ -351,7 +351,7 @@ export default function CheckoutPage () {
               {zx9count > 0 &&
                 <div className={checkout.itemList}>
                   <div className={checkout.itemImg}>
-                    <img src={zx9} alt="ZX9" />
+                    <img src={zx9} alt="ZX9" loading="lazy" />
                   </div>
                   <div className={checkout.itemTxt}>
                     <p className={checkout.name}>ZX9</p>
@@ -367,7 +367,7 @@ export default function CheckoutPage () {
               {zx7count > 0 &&
                 <div className={checkout.itemList}>
                   <div className={checkout.itemImg}>
-                    <img src={zx7} alt="ZX7" />
+                    <img src={zx7} alt="ZX7" loading="lazy" />
                   </div>
                   <div className={checkout.itemTxt}>
                     <p className={checkout.name}>ZX7</p>
@@ -383,7 +383,7 @@ export default function CheckoutPage () {
               {yx1count > 0 &&
                 <div className={checkout.itemList}>
                   <div className={checkout.itemImg}>
-                    <img src={yx1} alt="YX1" />
+                    <img src={yx1} alt="YX1" loading="lazy" />
                   </div>
                   <div className={checkout.itemTxt}>
                     <p className={checkout.name}>YX1</p>
@@ -418,7 +418,7 @@ export default function CheckoutPage () {
       <section className={checkout.confirmationWrapper} id="checkoutModal">
       {/* <section className={checkout.confirmationWrapper} onClick={closeModal} id="checkoutModal"> */}
         <div className={checkout.confirmationContent} onClick={(e) => e.stopPropagation()}>
-          <img src={check} alt="" />
+          <img src={check} alt="" loading="lazy" />
           <h1>THANK YOU <br />FOR YOUR ORDER</h1>
           <p className={checkout.msg}>You will receive an email confirmation shortly.</p>
           <div className={checkout.orders}>
@@ -426,22 +426,22 @@ export default function CheckoutPage () {
               <div className={checkout.details}>
                 <div className={checkout.detailsImg}>
                   {popupItemName === 'XX99 Mark II' &&
-                    <img src={markII} alt='XX99 Mark II' />
+                    <img src={markII} alt='XX99 Mark II' loading="lazy" />
                   }
                   {popupItemName === 'XX99 Mark I' &&
-                    <img src={markI} alt='XX99 Mark I' />
+                    <img src={markI} alt='XX99 Mark I' loading="lazy" />
                   }
                   {popupItemName === 'XX59' &&
-                    <img src={xx59} alt='XX59' />
+                    <img src={xx59} alt='XX59' loading="lazy" />
                   }
                   {popupItemName === 'ZX9' &&
-                    <img src={zx9} alt='ZX9' />
+                    <img src={zx9} alt='ZX9' loading="lazy" />
                   }
                   {popupItemName === 'ZX7' &&
-                    <img src={zx7} alt='ZX7' />
+                    <img src={zx7} alt='ZX7' loading="lazy" />
                   }
                   {popupItemName === 'YX1' &&
-                    <img src={yx1} alt='YX1' />
+                    <img src={yx1} alt='YX1' loading="lazy" />
                   }
                 </div>
                 <div className={checkout.detailsName}>
@@ -457,7 +457,7 @@ export default function CheckoutPage () {
                   {popupItemName !== 'XX99 Mark I' && markIcount > 0 &&
                     <div className={checkout.details}>
                       <div className={checkout.detailsImg}>
-                        <img src={markI} alt='XX99 Mark I' />
+                        <img src={markI} alt='XX99 Mark I' loading="lazy" />
                       </div>
                       <div className={checkout.detailsName}>
                         <p className={checkout.name}>XX99 Mark I</p>
@@ -471,7 +471,7 @@ export default function CheckoutPage () {
                   {popupItemName !== 'XX59' && xx59count > 0 &&
                     <div className={checkout.details}>
                       <div className={checkout.detailsImg}>
-                        <img src={xx59} alt="XX59" />
+                        <img src={xx59} alt="XX59" loading="lazy" />
                       </div>
                       <div className={checkout.detailsName}>
                         <p className={checkout.name}>XX59</p>
@@ -485,7 +485,7 @@ export default function CheckoutPage () {
                   {popupItemName !== 'ZX9' && zx9count > 0 &&
                     <div className={checkout.details}>
                       <div className={checkout.detailsImg}>
-                        <img src={zx9} alt="ZX9" />
+                        <img src={zx9} alt="ZX9" loading="lazy" />
                       </div>
                       <div className={checkout.detailsName}>
                         <p className={checkout.name}>ZX9</p>
@@ -499,7 +499,7 @@ export default function CheckoutPage () {
                   {popupItemName !== 'ZX7' && zx7count > 0 &&
                     <div className={checkout.details}>
                       <div className={checkout.detailsImg}>
-                        <img src={zx7} alt="ZX7" />
+                        <img src={zx7} alt="ZX7" loading="lazy" />
                       </div>
                       <div className={checkout.detailsName}>
                         <p className={checkout.name}>ZX7</p>
@@ -513,7 +513,7 @@ export default function CheckoutPage () {
                   {popupItemName !== 'YX1' && yx1count > 0 &&
                     <div className={checkout.details}>
                       <div className={checkout.detailsImg}>
-                        <img src={yx1} alt="YX1" />
+                        <img src={yx1} alt="YX1" loading="lazy" />
                       </div>
                       <div className={checkout.detailsName}>
                         <p className={checkout.name}>YX1</p>
