@@ -36,6 +36,7 @@
 
     img {
       width: 100%;
+      height: auto;
     }
   }
 
@@ -325,8 +326,13 @@
         width: 50%;
       }
 
+      @media screen and (max-width:576px) {
+        width: 90%;
+      }
+
       img {
         width: 100%;
+        height: auto;
       }
 
       h4 {
@@ -341,6 +347,10 @@
         cursor: pointer;
         max-width: 160px;
         margin: 0 auto;
+
+        @media screen and (max-width:576px) {
+          max-width: 200px;
+        }
 
         a {
           display: inline-block;

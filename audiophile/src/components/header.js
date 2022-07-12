@@ -96,7 +96,9 @@ function Header () {
           <div className="modalItemsWrapper" onClick={(e) => e.stopPropagation()}>
             <div className="items">
               <div className="item">
-                <img src={headphones} alt="headphones" loading="lazy" width="124" height="160" />
+                <div className="itemImg">
+                    <img src={headphones} alt="headphones" loading="lazy" width="124" height="160" />
+                </div>
                 <div className="itemLink">
                   <p>HEADPHONES</p>
                   <a href="/headphones/">
@@ -108,7 +110,9 @@ function Header () {
                 </div>
               </div>
               <div className="item">
-                <img src={speakers} alt="speakers" loading="lazy" width="123" height="147" />
+                <div className="itemImg">
+                  <img src={speakers} alt="speakers" loading="lazy" width="123" height="147" />
+                </div>
                 <div className="itemLink">
                   <p>SPEAKERS</p>
                   <a href="/speakers/">
@@ -120,7 +124,9 @@ function Header () {
                 </div>
               </div>
               <div className="item">
-                <img src={earphones} alt="earphones" loading="lazy" width="125" height="126" />
+                <div className="itemImg">
+                  <img src={earphones} alt="earphones" loading="lazy" width="125" height="126" />
+                </div>
                 <div className="itemLink">
                   <p>EARPHONES</p>
                   <a href="/earphones/">

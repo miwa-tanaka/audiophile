@@ -418,7 +418,7 @@ export default function CheckoutPage () {
       <section className={checkout.confirmationWrapper} id="checkoutModal">
       {/* <section className={checkout.confirmationWrapper} onClick={closeModal} id="checkoutModal"> */}
         <div className={checkout.confirmationContent} onClick={(e) => e.stopPropagation()}>
-          <img src={check} alt="" loading="lazy" width="64" height="64" />
+          <img src={check} alt="" className={checkout.checkmark} loading="lazy" width="64" height="64" />
           <h1>THANK YOU <br />FOR YOUR ORDER</h1>
           <p className={checkout.msg}>You will receive an email confirmation shortly.</p>
           <div className={checkout.orders}>

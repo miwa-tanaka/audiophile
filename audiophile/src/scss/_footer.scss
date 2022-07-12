@@ -31,6 +31,11 @@ footer {
         @media screen and (max-width:768px) {
           margin-bottom: 32px;
         }
+
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
 
       .links {
@@ -110,10 +115,15 @@ footer {
       .icons {
         display: flex;
         align-items: center;
+        padding-left: 0;
 
         li {
           list-style-type: none;
           padding-right: 18px;
+
+          &:last-child {
+            padding-right: 0;
+          }
 
           a {
             cursor: pointer;

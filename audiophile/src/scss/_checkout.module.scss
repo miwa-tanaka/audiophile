@@ -300,20 +300,16 @@
 
             img {
               width: 100%;
+              height: auto;
               max-width: 100px;
               border-radius: 15px;
             }
           }
 
           .itemTxt {
-            width: 25%;
+            width: 45%;
             // margin-left: -120px;
             margin-left: 20px;
-
-            @media screen and (max-width:768px) {
-              width: 40%;
-              // margin-left: 20px;
-            }
 
             .name {
               font-weight: 700;
@@ -442,6 +438,11 @@
       padding: 30px;
     }
 
+    .checkmark {
+      width: 64px;
+      height: 64px;
+    }
+
     h1 {
       font-weight: 700;
       font-size: 32px;
@@ -494,6 +495,7 @@
 
             img {
               width: 100%;
+              height: auto;
               border-radius: 10px;
             }
           }

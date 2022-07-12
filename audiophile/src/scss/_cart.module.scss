@@ -80,6 +80,7 @@
 
       img {
         width: 100%;
+        height: auto;
         max-width: 100px;
         border-radius: 15px;
       }
@@ -112,6 +113,10 @@
       background-color: $grey;
       padding: 15px;
 
+      @media screen and (max-width:576px) {
+        padding: 15px 10px;
+      }
+
       button {
         background-color: transparent;
         border: none;
@@ -129,6 +134,10 @@
         padding: 0 15px;
         width: 60px;
         text-align: center;
+
+        @media screen and (max-width:576px) {
+          width: 40px;
+        }
       }
     }
   }
