@@ -12,13 +12,8 @@ import zx7 from "../images/products/zx7-product.png"
 import zx9 from "../images/products/zx9-product.png"
 
 function Cart (props) {
-  // debugger
-  // const [isdisplay, setIsdisplay] = useState(false);
-
   const [itemcount, setItemcount] = useState(0);
   const [totalamount, setTotalamount] = useState(0);
-
-  // const itemcounttRef = useRef(itemcount);
 
   const [markIIcount, setMarkIIcount] = useState(0);
   const [markIcount, setMarkIcount] = useState(0);
@@ -28,13 +23,7 @@ function Cart (props) {
   const [yx1count, setYx1] = useState(0);
 
   useEffect(() => {
-    console.log("Called useeffect ")
     if (props.isdisplay) {
-      // const allItemsCount = {
-      //   "all": 0,
-      //   "yx1": 0
-      // }
-      // localStorage.setItem("allItems", JSON.stringify(allItemsCount))
       let preYx1count = 0
       let preXx59count = 0
       let preXx99I = 0
@@ -50,63 +39,37 @@ function Cart (props) {
       let zx9Price = 0
 
       const allItemCount = JSON.parse(localStorage.getItem("allItems"))
-      // debugger
       if (allItemCount === undefined || allItemCount === null) {
-        // debugger
         return false
       }
-      // debugger
-      // console.log(allItemCount)
+
       const yx1Info = JSON.parse(localStorage.getItem("yx1"))
-      // debugger
-      // console.log(yx1Info)
-      // debugger
       if (yx1Info !== null) {
-        // debugger
-        // const preAmount = yx1count + yx1Info.amount.count
         const preAmount = allItemCount.yx1.yx1count + yx1Info.amount.count
-        // debugger
         setYx1(preAmount)
-        // console.log(yx1count)
         localStorage.removeItem("yx1")
-        // debugger
-        // itemcounttRef.current = itemcounttRef + preAmount
-        // setItemcount(itemcounttRef.current)
-        // debugger
-        // setItemcount(itemcount + yx1Info.amount.count)
-        // setItemcount(allItemCount.all.itemcount + yx1Info.amount.count)
         preYx1count = yx1Info.amount.count
         yx1Price = 599 * preYx1count
-        // debugger
       } else {
-        // debugger
         setYx1(allItemCount.yx1.yx1count)
         preYx1count = 0
         yx1Price = 0
-        // debugger
-        // itemcounttRef.current = allItemCount.all.itemcount
-        // setItemcount(itemcounttRef.current)
-        // debugger
-        // setItemcount(allItemCount.all.itemcount)
-        // setYx1(1)
       }
+
       const xx59Info = JSON.parse(localStorage.getItem("xx59"))
-      // console.log(xx59Info)
       if (xx59Info !== null) {
         const preAmount = allItemCount.xx59.xx59count + xx59Info.amount.count
         setXx59(preAmount)
         localStorage.removeItem("xx59")
-        // setItemcount(allItemCount.all.itemcount + xx59Info.amount.count)
         preXx59count = xx59Info.amount.count
         xx59Price = 899 * preXx59count
       } else {
         setXx59(allItemCount.xx59.xx59count)
         preXx59count = 0
         xx59Price = 0
-        // setItemcount(allItemCount.all.itemcount)
       }
+
       const xx99IInfo = JSON.parse(localStorage.getItem("xx99I"))
-      // console.log(xx99IInfo)
       if (xx99IInfo !== null) {
         const preAmount = allItemCount.xx99I.markIcount + xx99IInfo.amount.count
         setMarkIcount(preAmount)
@@ -118,8 +81,8 @@ function Cart (props) {
         preXx99I = 0
         xx99IPrice = 0
       }
+
       const xx99IIInfo = JSON.parse(localStorage.getItem("xx99II"))
-      // console.log(xx99IIInfo)
       if (xx99IIInfo !== null) {
         const preAmount = allItemCount.xx99II.markIIcount + xx99IIInfo.amount.count
         setMarkIIcount(preAmount)
@@ -131,8 +94,8 @@ function Cart (props) {
         preXx99II = 0
         xx99IIPrice = 0
       }
+
       const zx7Info = JSON.parse(localStorage.getItem("zx7"))
-      // console.log(zx7Info)
       if (zx7Info !== null) {
         const preAmount = allItemCount.zx7.zx7count + zx7Info.amount.count
         setZx7(preAmount)
@@ -144,8 +107,8 @@ function Cart (props) {
         preZx7 = 0
         zx7Price = 0
       }
+
       const zx9Info = JSON.parse(localStorage.getItem("zx9"))
-      // console.log(zx9Info)
       if (zx9Info !== null) {
         const preAmount = allItemCount.zx9.zx9count + zx9Info.amount.count
         setZx9(preAmount)
@@ -157,66 +120,24 @@ function Cart (props) {
         preZx9 = 0
         zx9Price = 0
       }
-      // allCount()
-      // debugger
+
       const all = allItemCount.all.itemcount + preYx1count + preXx59count + preXx99I + preXx99II + preZx7 + preZx9
       setItemcount(all)
-      // const totalYx1Price = 599 * preYx1count
-      // const totalXx59Price = 899 * preXx59count
-      // const totalXx99IPrice = 1750 * preXx99I
-      // const totalXx99IIPrice = 2999 * preXx99II
-      // const totalZx7Price = 3500 * preZx7
-      // const totalZx9Price = 4500 * preZx9
-      // const totalPrice = totalYx1Price + totalXx59Price + totalXx99IPrice + totalXx99IIPrice + totalZx7Price + totalZx9Price
-      // debugger
+
       let toNumber = null
       if (typeof allItemCount.price.totalamount  === 'string' || allItemCount.price.totalamount instanceof String) {
         toNumber = parseFloat(allItemCount.price.totalamount.replace(/,/g, ""))
       } else {
         toNumber = allItemCount.price.totalamount
       }
-      // debugger
       const totalPrice = toNumber + yx1Price + xx59Price + xx99IPrice + xx99IIPrice + zx7Price + zx9Price
       const preTotalPrice = totalPrice.toLocaleString()
-      // debugger
       setTotalamount(preTotalPrice)
     }
   }, [props.isdisplay])
 
-  // const allCount = () => {
-  //   // debugger
-  //   console.log("called allcount")
-  //   // debugger
-  //   // console.log(itemcounttRef.current)
-  //   // const allItemCount = JSON.parse(localStorage.getItem("allItems"))
-  //   // let all = null
-  //   // if (allItemCount.all !== null) {
-  //   //   debugger
-  //   //   console.log(allItemCount.all.itemcount)
-  //   //   all = allItemCount.all.itemcount
-  //   //   // localStorage.removeItem("allItems")
-  //   // } else {
-  //   //   all = markIIcount + markIcount + xx59count + zx9count + zx7count + yx1count
-  //   // }
-  //   // if () {
-
-  //   // } else {
-
-  //   // }
-  //   const all = markIIcount + markIcount + xx59count + zx9count + zx7count + yx1count
-  //   // const allItems = {
-  //   //   "count": all
-  //   // }
-  //   // localStorage.setItem("allAmount", JSON.stringify(allItems))
-  //   debugger
-  //   setItemcount(all)
-  //   // debugger
-  // }
-
   const closeModal = () => {
-    // debugger
     if (itemcount === 0 || itemcount == undefined) {
-      // debugger
       setMarkIIcount(0)
       setMarkIcount(0)
       setXx59(0)
@@ -226,35 +147,7 @@ function Cart (props) {
       setItemcount(0)
       setTotalamount(0)
     }
-    // debugger
-      // const allItemsCount = {
-      //   "all": 0,
-      //   "yx1": 0,
-      //   "xx59": 0,
-      //   "xx99I": 0,
-      //   "xx99II": 0,
-      //   "zx7": 0,
-      //   "zx9": 0
-      // }
-      // localStorage.setItem("allItems", JSON.stringify(allItemsCount))
-    // } else {
-      // debugger
-      // const all = {itemcount}
-      // const allItemsCount = {
-      //   "all": {itemcount},
-      //   "yx1": {yx1count},
-      //   "xx59": {xx59count},
-      //   "xx99I": {markIIcount},
-      //   "xx99II": {markIIcount},
-      //   "zx7": {zx7count},
-      //   "zx9": {zx9count}
-      // }
-      // localStorage.setItem("allItems", JSON.stringify(allItemsCount))
-    // }
-    // const preAllItemCount = parseFloat(itemcount.replace(/,/g, ""))
-    // console.log(preAllItemCount)
-    // console.log(itemcount)
-    // debugger
+
     const allItemsCount = {
       "all": {itemcount},
       "price": {totalamount},
@@ -268,7 +161,7 @@ function Cart (props) {
     localStorage.setItem("allItems", JSON.stringify(allItemsCount))
     const currentPath = window.location.pathname
     props.setIsdisplay(false)
-    if (currentPath === '/checkout/') {
+    if (currentPath === '../checkout/') {
       window.location.reload()
     }
   }
@@ -279,12 +172,8 @@ function Cart (props) {
       setItemcount(itemcount - 1)
       const toNumber = parseFloat(totalamount.replace(/,/g, ""))
       const preTotalPrice = toNumber - 2999
-      // debugger
-      // const preTotalPrice = totalamount - 2999
       const totalPrice = preTotalPrice.toLocaleString()
       setTotalamount(totalPrice)
-      // setTotalamount(totalamount - 2999)
-      // allCount()
     }
   }
 
@@ -292,13 +181,10 @@ function Cart (props) {
     if (markIIcount < 100) {
       setMarkIIcount(markIIcount + 1)
       setItemcount(itemcount + 1)
-      // const preTotalPrice = totalamount + 2999
       const toNumber = parseFloat(totalamount.replace(/,/g, ""))
       const preTotalPrice = toNumber + 2999
       const totalPrice = preTotalPrice.toLocaleString()
       setTotalamount(totalPrice)
-      // setTotalamount(totalamount + 2999)
-      // allCount()
     }
   }
 
@@ -306,13 +192,10 @@ function Cart (props) {
     if (markIcount > 0) {
       setMarkIcount(markIcount - 1)
       setItemcount(itemcount - 1)
-      // const preTotalPrice = totalamount - 1750
       const toNumber = parseFloat(totalamount.replace(/,/g, ""))
       const preTotalPrice = toNumber - 1750
       const totalPrice = preTotalPrice.toLocaleString()
       setTotalamount(totalPrice)
-      // setTotalamount(totalamount - 1750)
-      // allCount()
     }
   }
 
@@ -320,13 +203,10 @@ function Cart (props) {
     if (markIcount < 100) {
       setMarkIcount(markIcount + 1)
       setItemcount(itemcount + 1)
-      // const preTotalPrice = totalamount + 1750
       const toNumber = parseFloat(totalamount.replace(/,/g, ""))
       const preTotalPrice = toNumber + 1750
       const totalPrice = preTotalPrice.toLocaleString()
       setTotalamount(totalPrice)
-      // setTotalamount(totalamount + 1750)
-      // allCount()
     }
   }
 
@@ -334,13 +214,10 @@ function Cart (props) {
     if (xx59count > 0) {
       setXx59(xx59count - 1)
       setItemcount(itemcount - 1)
-      // const preTotalPrice = totalamount - 899
       const toNumber = parseFloat(totalamount.replace(/,/g, ""))
       const preTotalPrice = toNumber - 899
       const totalPrice = preTotalPrice.toLocaleString()
       setTotalamount(totalPrice)
-      // setTotalamount(totalamount - 899)
-      // allCount()
     }
   }
 
@@ -348,13 +225,10 @@ function Cart (props) {
     if (xx59count < 100) {
       setXx59(xx59count + 1)
       setItemcount(itemcount + 1)
-      // const preTotalPrice = totalamount + 899
       const toNumber = parseFloat(totalamount.replace(/,/g, ""))
       const preTotalPrice = toNumber + 899
       const totalPrice = preTotalPrice.toLocaleString()
       setTotalamount(totalPrice)
-      // setTotalamount(totalamount + 899)
-      // allCount()
     }
   }
 
@@ -362,13 +236,10 @@ function Cart (props) {
     if (zx9count > 0) {
       setZx9(zx9count - 1)
       setItemcount(itemcount - 1)
-      // const preTotalPrice = totalamount - 4500
       const toNumber = parseFloat(totalamount.replace(/,/g, ""))
       const preTotalPrice = toNumber - 4500
       const totalPrice = preTotalPrice.toLocaleString()
       setTotalamount(totalPrice)
-      // setTotalamount(totalamount - 4500)
-      // allCount()
     }
   }
 
@@ -376,13 +247,10 @@ function Cart (props) {
     if (zx9count < 100) {
       setZx9(zx9count + 1)
       setItemcount(itemcount + 1)
-      // const preTotalPrice = totalamount + 4500
       const toNumber = parseFloat(totalamount.replace(/,/g, ""))
       const preTotalPrice = toNumber + 4500
       const totalPrice = preTotalPrice.toLocaleString()
       setTotalamount(totalPrice)
-      // setTotalamount(totalamount + 4500)
-      // allCount()
     }
   }
 
@@ -390,13 +258,10 @@ function Cart (props) {
     if (zx7count > 0) {
       setZx7(zx7count - 1)
       setItemcount(itemcount - 1)
-      // const preTotalPrice = totalamount - 3500
       const toNumber = parseFloat(totalamount.replace(/,/g, ""))
       const preTotalPrice = toNumber - 3500
       const totalPrice = preTotalPrice.toLocaleString()
       setTotalamount(totalPrice)
-      // setTotalamount(totalamount - 3500)
-      // allCount()
     }
   }
 
@@ -404,13 +269,10 @@ function Cart (props) {
     if (zx7count < 100) {
       setZx7(zx7count + 1)
       setItemcount(itemcount + 1)
-      // const preTotalPrice = totalamount + 3500
       const toNumber = parseFloat(totalamount.replace(/,/g, ""))
       const preTotalPrice = toNumber + 3500
       const totalPrice = preTotalPrice.toLocaleString()
       setTotalamount(totalPrice)
-      // setTotalamount(totalamount + 3500)
-      // allCount()
     }
   }
 
@@ -418,13 +280,10 @@ function Cart (props) {
     if (yx1count > 0) {
       setYx1(yx1count - 1)
       setItemcount(itemcount - 1)
-      // const preTotalPrice = totalamount - 599
       const toNumber = parseFloat(totalamount.replace(/,/g, ""))
       const preTotalPrice = toNumber - 599
       const totalPrice = preTotalPrice.toLocaleString()
       setTotalamount(totalPrice)
-      // setTotalamount(totalamount - 599)
-      // allCount()
     }
   }
 
@@ -432,28 +291,14 @@ function Cart (props) {
     if (yx1count < 100) {
       setYx1(yx1count + 1)
       setItemcount(itemcount + 1)
-      // const preTotalPrice = totalamount + 599
       const toNumber = parseFloat(totalamount.replace(/,/g, ""))
       const preTotalPrice = toNumber + 599
       const totalPrice = preTotalPrice.toLocaleString()
       setTotalamount(totalPrice)
-      // setTotalamount(totalamount + 599)
-      // allCount()
     }
   }
 
   const removeItems = () => {
-    // localStorage.removeItem("allItems")
-    // const allItemsCount = {
-    //   "all": 0,
-    //   "yx1": 0,
-    //   "xx59": 0,
-    //   "xx99I": 0,
-    //   "xx99II": 0,
-    //   "zx7": 0,
-    //   "zx9": 0
-    // }
-    // localStorage.setItem("allItems", JSON.stringify(allItemsCount))
     localStorage.removeItem("yx1")
     localStorage.removeItem("xx59")
     localStorage.removeItem("xx99I")
@@ -471,17 +316,6 @@ function Cart (props) {
   }
 
   const checkout = () => {
-    // const checkoutInfo = {
-    //   "totalCount": {itemcount},
-    //   "totalPrice": {totalamount},
-    //   "yx1": {yx1count},
-    //   "xx59": {xx59count},
-    //   "xx99I": {markIcount},
-    //   "xx99II": {markIIcount},
-    //   "zx7": {zx7count},
-    //   "zx9": {zx9count}
-    // }
-    // localStorage.setItem("checkoutInfo", JSON.stringify(checkoutInfo))
     const allItemsCount = {
       "all": {itemcount},
       "price": {totalamount},
@@ -494,7 +328,7 @@ function Cart (props) {
     }
     localStorage.setItem("allItems", JSON.stringify(allItemsCount))
     props.setIsdisplay(false)
-    window.location.href = '/checkout/';
+    window.location.href = '../checkout/';
   }
 
   if (props.isdisplay) {

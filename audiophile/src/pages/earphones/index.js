@@ -31,7 +31,7 @@ const IndexPage = () => (
             its active noise cancellation feature.
           </p>
           <div>
-            <a href="/earphones/yx1/">SEE PRODUCT</a>
+            <a href="../earphones/yx1/">SEE PRODUCT</a>
           </div>
         </div>
       </div>

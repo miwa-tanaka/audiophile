@@ -31,7 +31,7 @@ const IndexPage = () => (
             creating new possibilities for more pleasing and practical audio setups.
           </p>
           <div>
-            <a href="/speakers/zx9/">SEE PRODUCT</a>
+            <a href="../speakers/zx9/">SEE PRODUCT</a>
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@ const IndexPage = () => (
             that represents the top of the line powered speakers for home or studio use.
           </p>
           <div>
-            <a href="/speakers/zx7/">SEE PRODUCT</a>
+            <a href="../speakers/zx7/">SEE PRODUCT</a>
           </div>
         </div>
         <div className={styles.productImg}>

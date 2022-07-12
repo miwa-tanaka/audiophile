@@ -15,22 +15,22 @@ const Footer = ({ siteTitle }) => (
         <div>
           <ul className="links">
             <li>
-              <a href="/">
+              <a href="../">
                 HOME
               </a>
             </li>
             <li>
-              <a href="/headphones/">
+              <a href="../headphones/">
                 HEADPHONES
               </a>
             </li>
             <li>
-              <a href="/speakers/">
+              <a href="../speakers/">
                 SPEAKERS
               </a>
             </li>
             <li>
-              <a href="/earphones/">
+              <a href="../earphones/">
                 EARPHONES
               </a>
             </li>

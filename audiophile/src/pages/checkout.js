@@ -74,7 +74,7 @@ export default function CheckoutPage () {
     localStorage.removeItem("xx99II")
     localStorage.removeItem("zx7")
     localStorage.removeItem("zx9")
-    window.location.href = '/'
+    window.location.href = '../'
   }
 
   const paymentChecked = (event) => {

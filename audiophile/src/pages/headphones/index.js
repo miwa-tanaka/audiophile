@@ -31,7 +31,7 @@ const IndexPage = () => (
             and precision of studio-quality sound.
           </p>
           <div>
-            <a href="/headphones/xx99-markII/">SEE PRODUCT</a>
+            <a href="../headphones/xx99-markII/">SEE PRODUCT</a>
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@ const IndexPage = () => (
             and music aficionados alike in studios and on the go.
           </p>
           <div>
-            <a href="/headphones/xx99-markI/">SEE PRODUCT</a>
+            <a href="../headphones/xx99-markI/">SEE PRODUCT</a>
           </div>
         </div>
         <div className={styles.productImg}>
@@ -61,7 +61,7 @@ const IndexPage = () => (
             The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.
           </p>
           <div>
-            <a href="/headphones/xx59/">SEE PRODUCT</a>
+            <a href="../headphones/xx59/">SEE PRODUCT</a>
           </div>
         </div>
       </div>

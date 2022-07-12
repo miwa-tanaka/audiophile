@@ -49,7 +49,7 @@ export default function Zx7 () {
 
       <section className="pageWidth">
         <div className={styles.goBack}>
-          <a href="/speakers/">Go Back</a>
+          <a href="../speakers/">Go Back</a>
         </div>
         <div className={styles.itemsWrapper}>
           <div className={styles.itemsImgs}>
@@ -138,21 +138,21 @@ export default function Zx7 () {
               <img src={zx9} alt="" loading="lazy" width="320" height="332" />
               <h4>ZX9 SPEAKER</h4>
               <div className={styles.url}>
-                <a href="/speakers/zx9/">SEE PRODUCT</a>
+                <a href="../speakers/zx9/">SEE PRODUCT</a>
               </div>
             </div>
             <div className={styles.product}>
               <img src={xx99i} alt="" loading="lazy" width="320" height="332" />
               <h4>XX99 MARK I</h4>
               <div className={styles.url}>
-                <a href="/headphones/xx99-markI/">SEE PRODUCT</a>
+                <a href="../headphones/xx99-markI/">SEE PRODUCT</a>
               </div>
             </div>
             <div className={styles.product}>
               <img src={xx59} alt="" loading="lazy" width="320" height="332" />
               <h4>XX59</h4>
               <div className={styles.url}>
-                <a href="/headphones/xx59/">SEE PRODUCT</a>
+                <a href="../headphones/xx59/">SEE PRODUCT</a>
               </div>
             </div>
           </div>

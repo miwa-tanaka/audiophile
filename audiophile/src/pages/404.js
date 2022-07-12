@@ -13,7 +13,7 @@ const NotFoundPage = () => (
       <h2>PAGE NOT FOUND</h2>
       <p>Oops! The page you are looking for does not exsit. It might have been moved or deleted.</p>
       <div className={styles.homeLink}>
-        <a href="/">BACK TO HOME</a>
+        <a href="../">BACK TO HOME</a>
       </div>
     </section>
   </Layout>
