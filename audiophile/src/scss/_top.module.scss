@@ -2,9 +2,6 @@
 
 .newItemWrapper {
   background-color: $black2;
-  // @media screen and (max-width:768px) {
-  //   position: relative;
-  // }
 }
 
 .newItem {
@@ -20,7 +17,6 @@
     width: 100%;
     height: auto;
     padding: 0;
-    // display: block;
     position: relative;
   }
 }
@@ -31,16 +27,10 @@
     width: 100%;
     position: absolute;
     z-index: 10;
-    // top: 0;
-    // left: 0;
-    // bottom: 0;
-    // right: 0;
-    // margin: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
-    // margin: auto;
   }
 
   .newProduct {
@@ -88,7 +78,6 @@
   }
 
   .newProductLink {
-
     a {
       display: inline-block;
       background-color: $orange;
@@ -110,6 +99,7 @@
 .newItemImg {
   width: 50%;
   height: auto;
+
   @media screen and (max-width:768px) {
     width: 100%;
     background-color: $black2;
@@ -135,6 +125,7 @@
 .productsWrapper {
   width: 80%;
   margin: 0 auto;
+
   @media screen and (max-width:768px) {
     width: 95%;
   }
@@ -147,26 +138,15 @@
     border-radius: 8px;
     margin-bottom: 50px;
 
-    // &:before {
-    //   content: "";
-    //   display: inline-block;
-    //   height: 400px;
-    //   background-color: $orange;
-    //   border: 2px solid $light-orange;
-    //   border-radius: 50%;
-    //   z-index: 1;
-    // }
-
     @media screen and (max-width:768px) {
       flex-direction: column;
       text-align: center;
     }
 
     .zx9Img {
-      // position: relative;
       width: 60%;
       text-align: center;
-      // padding-top: 90px;
+
       @media screen and (max-width:768px) {
         padding: 50px 0;
         width: 80%;
@@ -208,7 +188,6 @@
       }
 
       p {
-        // width: 60%;
         max-width: 90%;
         color: $white;
         font-size: 15px;
@@ -256,8 +235,6 @@
 .zx7 {
   position: relative;
   width: 100%;
-  // height: auto;
-  // background: url("../images/products/zx7-speaker.png") no-repeat 0 0 !important;
   background-size: 100%;
   border-radius: 8px;
   margin-bottom: 50px;
@@ -311,19 +288,9 @@
 
   .zx7Txt {
     position: absolute;
-    // top: 0;
     top: 50%;
     transform: translateY(-50%);
     left: 5%;
-    // padding: 8% 0 10% 6%;
-
-    @media screen and (max-width:768px) {
-      // padding: 15% 0 15% 6%;
-    }
-
-    @media screen and (max-width:576px) {
-      // padding: 20% 0 20% 6%;
-    }
 
     h3 {
       font-weight: 700;
@@ -359,7 +326,6 @@
 
 .yx1 {
   display: flex;
-  // align-items: stretch;
   justify-content: space-between;
   margin-bottom: 50px;
 
@@ -370,7 +336,6 @@
   .yx1Img {
     width: 50%;
     height: auto;
-    // margin-right: 30px;
 
     @media screen and (max-width:576px) {
       width: 100%;
@@ -388,7 +353,6 @@
     background-color: $grey;
     width: 47%;
     border-radius: 8px;
-    // position: relative;
 
     @media screen and (max-width:576px) {
       width: 100%;
@@ -398,10 +362,6 @@
     .yx1TxtPosition {
       width: 100%;
       padding-left: 40px;
-      // position: absolute;
-      // top: 50%;
-      // left: 20%;
-      // transform: translate(-20%,-50%);
 
       @media screen and (max-width:576px) {
         padding: 40px 24px;
@@ -414,8 +374,6 @@
       letter-spacing: 2px;
       color: $black;
       margin: 0;
-      // padding-top: 18%;
-      // padding-left: 10%;
     }
 
     .yx1Link {

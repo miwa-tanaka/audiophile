@@ -1,9 +1,6 @@
 @import "./variables";
 
 .itemsWrapper {
-  // background-color: $white;
-  // width: 80%;
-  // margin: 0 auto;
   padding: 180px 0 120px 0;
 
   @media screen and (max-width:768px) {
@@ -76,12 +73,10 @@
       }
 
       .itemImg {
-        // margin-top: -100px;
         position: absolute;
         left: 50%;
         bottom: 100px;
         transform: translateX(-50%);
-        // margin-top: -25%;
         width: 37%;
         max-width: 170px;
         min-width: 140px;
@@ -92,7 +87,6 @@
         }
 
         img {
-          // margin-top: -80px;
           width: 100%;
           height: auto;
         }

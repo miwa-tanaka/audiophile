@@ -41,8 +41,6 @@ export default function Yx1 () {
     }
     localStorage.setItem("yx1", JSON.stringify(yx1Info))
     setIsdisplay(true)
-
-    // localStorage.removeItem("yx1")
   }
 
   return (

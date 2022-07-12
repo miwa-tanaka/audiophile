@@ -163,8 +163,3 @@ export default function Xx59 () {
     </Layout>
   )
 }
-// const IndexPage = () => (
-
-// )
-
-// export default IndexPage
