@@ -62,7 +62,7 @@ function Header () {
                 </a>
               </li>
               <li>
-                <a href="/headphones/">
+                <a href="../headphones/">
                   HEADPHONES
                 </a>
               </li>
