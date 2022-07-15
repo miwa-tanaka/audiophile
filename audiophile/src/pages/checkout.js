@@ -159,10 +159,6 @@ export default function CheckoutPage () {
       <Seo title="Checkout" />
 
       <section className={checkout.checkoutWrapper}>
-        <div className={checkout.goBack}>
-          <button>Go back</button>
-        </div>
-
         <form className={checkout.checkoutContents} onSubmit={handleSubmit(onSubmit)}>
           <div className={checkout.checkout}>
             <h1>CHECKOUT</h1>
