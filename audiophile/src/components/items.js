@@ -1,5 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
+import { Link } from "gatsby"
 
 import * as items from "../scss/_items.module.scss"
 
@@ -16,12 +17,12 @@ const Items = ({ siteTitle }) => (
         </div>
         <div className={items.itemLink}>
           <p>HEADPHONES</p>
-          <a href="../headphones/">
+          <Link to="/headphones/">
             SHOP
             <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" strokeWidth="2"/>
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
       <div className={items.item}>
@@ -30,12 +31,12 @@ const Items = ({ siteTitle }) => (
         </div>
         <div className={items.itemLink}>
           <p>SPEAKERS</p>
-          <a href="../speakers/">
+          <Link to="/speakers/">
             SHOP
             <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" strokeWidth="2"/>
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
       <div className={items.item}>
@@ -44,12 +45,12 @@ const Items = ({ siteTitle }) => (
         </div>
         <div className={items.itemLink}>
           <p>EARPHONES</p>
-          <a href="../earphones/">
+          <Link to="/earphones/">
             SHOP
             <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" strokeWidth="2"/>
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

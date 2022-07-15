@@ -1,6 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useState, useEffect, useRef } from 'react'
+import { navigate } from "gatsby"
 
 import * as cart from "../scss/_cart.module.scss"
 
@@ -328,7 +329,7 @@ function Cart (props) {
     }
     localStorage.setItem("allItems", JSON.stringify(allItemsCount))
     props.setIsdisplay(false)
-    window.location.href = '../checkout/';
+    navigate("/checkout/")
   }
 
   if (props.isdisplay) {

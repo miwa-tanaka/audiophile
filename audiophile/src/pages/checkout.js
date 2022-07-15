@@ -1,6 +1,7 @@
 import * as React from "react"
 import { useState, useEffect } from 'react'
 import { useForm } from "react-hook-form";
+import { navigate } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -74,7 +75,7 @@ export default function CheckoutPage () {
     localStorage.removeItem("xx99II")
     localStorage.removeItem("zx7")
     localStorage.removeItem("zx9")
-    window.location.href = '../'
+    navigate("/")
   }
 
   const paymentChecked = (event) => {

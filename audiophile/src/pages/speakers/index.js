@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Link } from "gatsby"
 
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
@@ -31,7 +32,7 @@ const IndexPage = () => (
             creating new possibilities for more pleasing and practical audio setups.
           </p>
           <div>
-            <a href="../speakers/zx9/">SEE PRODUCT</a>
+            <Link to="/speakers/zx9/">SEE PRODUCT</Link>
           </div>
         </div>
       </div>
@@ -44,7 +45,7 @@ const IndexPage = () => (
             that represents the top of the line powered speakers for home or studio use.
           </p>
           <div>
-            <a href="../speakers/zx7/">SEE PRODUCT</a>
+            <Link to="/speakers/zx7/">SEE PRODUCT</Link>
           </div>
         </div>
         <div className={styles.productImg}>

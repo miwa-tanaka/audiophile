@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Link } from "gatsby"
 
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
@@ -31,7 +32,7 @@ const IndexPage = () => (
             its active noise cancellation feature.
           </p>
           <div>
-            <a href="../earphones/yx1/">SEE PRODUCT</a>
+            <Link to="/earphones/yx1/">SEE PRODUCT</Link>
           </div>
         </div>
       </div>

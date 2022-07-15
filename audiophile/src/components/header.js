@@ -1,6 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useState } from 'react'
+import { Link } from "gatsby"
 
 import Cart from "../components/cart"
 
@@ -44,30 +45,22 @@ function Header () {
               <span className="navicon"></span>
             </label>
           </div>
-          <a href="../" className="logo">
+          <Link to="/" className="logo">
             <img src={audiophile} alt="audiophile logo" loading="lazy" width="143" height="25" />
-          </a>
+          </Link>
           <div className="linksWrapper">
             <ul className="links">
               <li>
-                <a href="../">
-                  HOME
-                </a>
+                <Link to="/">HOME</Link>
               </li>
               <li>
-                <a href="../headphones/">
-                  HEADPHONES
-                </a>
+                <Link to="/headphones/">HEADPHONES</Link>
               </li>
               <li>
-                <a href="../speakers/">
-                  SPEAKERS
-                </a>
+                <Link to="/speakers/">SPEAKERS</Link>
               </li>
               <li>
-                <a href="../earphones/">
-                  EARPHONES
-                </a>
+                <Link to="/earphones/">EARPHONES</Link>
               </li>
             </ul>
           </div>
@@ -89,12 +82,12 @@ function Header () {
                 </div>
                 <div className="itemLink">
                   <p>HEADPHONES</p>
-                  <a href="../headphones/">
+                  <Link to="/headphones/">
                     SHOP
                     <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" strokeWidth="2"/>
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="item">
@@ -103,12 +96,12 @@ function Header () {
                 </div>
                 <div className="itemLink">
                   <p>SPEAKERS</p>
-                  <a href="../speakers/">
+                  <Link to="/speakers/">
                     SHOP
                     <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" strokeWidth="2"/>
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="item">
@@ -117,12 +110,12 @@ function Header () {
                 </div>
                 <div className="itemLink">
                   <p>EARPHONES</p>
-                  <a href="../earphones/">
+                  <Link to="/earphones/">
                     SHOP
                     <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" strokeWidth="2"/>
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

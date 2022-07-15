@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Link } from "gatsby"
 
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
@@ -31,7 +32,7 @@ const IndexPage = () => (
             and precision of studio-quality sound.
           </p>
           <div>
-            <a href="../headphones/xx99-markII/">SEE PRODUCT</a>
+            <Link to="/headphones/xx99-markII/">SEE PRODUCT</Link>
           </div>
         </div>
       </div>
@@ -44,7 +45,7 @@ const IndexPage = () => (
             and music aficionados alike in studios and on the go.
           </p>
           <div>
-            <a href="../headphones/xx99-markI/">SEE PRODUCT</a>
+            <Link to="/headphones/xx99-markI/">SEE PRODUCT</Link>
           </div>
         </div>
         <div className={styles.productImg}>
@@ -61,7 +62,7 @@ const IndexPage = () => (
             The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.
           </p>
           <div>
-            <a href="../headphones/xx59/">SEE PRODUCT</a>
+            <Link to="/headphones/xx59/">SEE PRODUCT</Link>
           </div>
         </div>
       </div>
