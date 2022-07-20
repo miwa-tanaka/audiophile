@@ -406,9 +406,7 @@ export default function CheckoutPage () {
               <span>GRAND TOTAL</span>
               <p className={checkout.orange}>$ {grandTotal}</p>
             </div>
-            <div className={checkout.pay}>
-              <input type="submit" value="CONTINUE & PAY" />
-            </div>
+            <input type="submit" value="CONTINUE & PAY" />
           </div>
         </form>
       </section>
