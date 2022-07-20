@@ -68,6 +68,9 @@ export default function CheckoutPage () {
   const closeModal = () => {
     const modal = document.getElementById("checkoutModal")
     modal.style.display = "none"
+    const modalBg = document.getElementById("gatsby-focus-wrapper")
+    modalBg.style.height = "auto"
+    modalBg.style.overflowY = "scroll"
     localStorage.removeItem("allItems")
     localStorage.removeItem("yx1")
     localStorage.removeItem("xx59")
@@ -96,6 +99,10 @@ export default function CheckoutPage () {
   const onSubmit = data => {
     const modal = document.getElementById("checkoutModal")
     modal.style.display = "block"
+    const modalBg = document.getElementById("gatsby-focus-wrapper")
+    modalBg.style.height = "100vh"
+    modalBg.style.overflowY = "hidden"
+
     let itemCount = 0
     if (markIIcount > 0) {
       setPopupItemName('XX99 Mark II')
@@ -411,6 +418,7 @@ export default function CheckoutPage () {
         </form>
       </section>
       <section className={checkout.confirmationWrapper} id="checkoutModal">
+        {/* <div className={checkout.hoge}> */}
         <div className={checkout.confirmationContent} onClick={(e) => e.stopPropagation()}>
           <img src={check} alt="" className={checkout.checkmark} loading="lazy" width="64" height="64" />
           <h1>THANK YOU <br />FOR YOUR ORDER</h1>
@@ -543,6 +551,7 @@ export default function CheckoutPage () {
             <button onClick={closeModal}>BACK TO HOME</button>
           </div>
         </div>
+        {/* </div> */}
       </section>
     </Layout>
   )
