@@ -532,10 +532,10 @@ export default function CheckoutPage () {
                 <div className={checkout.count2}>
                   <hr />
                   {popupTotaItemsModal&&
-                    <button onClick={orderdItemsDetails}>View less</button>
+                    <button onClick={orderdItemsDetails} aria-label="View less">View less</button>
                   }
                   {!popupTotaItemsModal &&
-                    <button onClick={orderdItemsDetails}>and {popupTotaItems} other item(s)</button>
+                    <button onClick={orderdItemsDetails} aria-label="other items">and {popupTotaItems} other item(s)</button>
                   }
                 </div>
               }
@@ -548,7 +548,7 @@ export default function CheckoutPage () {
             </div>
           </div>
           <div className={checkout.backBtn}>
-            <button onClick={closeModal}>BACK TO HOME</button>
+            <button onClick={closeModal} aria-label="back to home">BACK TO HOME</button>
           </div>
         </div>
         {/* </div> */}

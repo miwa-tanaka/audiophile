@@ -339,7 +339,7 @@ function Cart (props) {
           <div className={cart.removeBtn}>
             <h5>CART ({itemcount})</h5>
             {itemcount > 0 &&
-              <button onClick={removeItems}>Remove all</button>
+              <button onClick={removeItems} aria-label="Remove all">Remove all</button>
             }
           </div>
           <div className={cart.itemListWrapper}>
@@ -353,11 +353,11 @@ function Cart (props) {
                   <p className={cart.price}>$ 2,999</p>
                 </div>
                 <div className={cart.counter}>
-                  <button onClick={markIIdecrease}>-</button>
+                  <button onClick={markIIdecrease} aria-label="decrease">-</button>
                   <span>
                     {markIIcount}
                   </span>
-                  <button onClick={markIIincrease}>+</button>
+                  <button onClick={markIIincrease} aria-label="increase">+</button>
                 </div>
               </div>
             }
@@ -372,11 +372,11 @@ function Cart (props) {
                   <p className={cart.price}>$ 1,750</p>
                 </div>
                 <div className={cart.counter}>
-                  <button onClick={markIdecrease}>-</button>
+                  <button onClick={markIdecrease} aria-label="decrease">-</button>
                   <span>
                     {markIcount}
                   </span>
-                  <button onClick={markIincrease}>+</button>
+                  <button onClick={markIincrease} aria-label="increase">+</button>
                 </div>
               </div>
             }
@@ -391,11 +391,11 @@ function Cart (props) {
                   <p className={cart.price}>$ 899</p>
                 </div>
                 <div className={cart.counter}>
-                  <button onClick={xx59decrease}>-</button>
+                  <button onClick={xx59decrease} aria-label="decrease">-</button>
                   <span>
                     {xx59count}
                   </span>
-                  <button onClick={xx59increase}>+</button>
+                  <button onClick={xx59increase} aria-label="increase">+</button>
                 </div>
               </div>
             }
@@ -410,11 +410,11 @@ function Cart (props) {
                   <p className={cart.price}>$ 4,500</p>
                 </div>
                 <div className={cart.counter}>
-                  <button onClick={zx9decrease}>-</button>
+                  <button onClick={zx9decrease} aria-label="decrease">-</button>
                   <span>
                     {zx9count}
                   </span>
-                  <button onClick={zx9increase}>+</button>
+                  <button onClick={zx9increase} aria-label="increase">+</button>
                 </div>
               </div>
             }
@@ -429,11 +429,11 @@ function Cart (props) {
                   <p className={cart.price}>$ 3,500</p>
                 </div>
                 <div className={cart.counter}>
-                  <button onClick={zx7decrease}>-</button>
+                  <button onClick={zx7decrease} aria-label="decrease">-</button>
                   <span>
                     {zx7count}
                   </span>
-                  <button onClick={zx7increase}>+</button>
+                  <button onClick={zx7increase} aria-label="increase">+</button>
                 </div>
               </div>
             }
@@ -448,11 +448,11 @@ function Cart (props) {
                   <p className={cart.price}>$ 599</p>
                 </div>
                 <div className={cart.counter}>
-                  <button onClick={yx1decrease}>-</button>
+                  <button onClick={yx1decrease} aria-label="decrease">-</button>
                   <span>
                     {yx1count}
                   </span>
-                  <button onClick={yx1increase}>+</button>
+                  <button onClick={yx1increase} aria-label="increase">+</button>
                 </div>
               </div>
             }
@@ -465,7 +465,7 @@ function Cart (props) {
                 <p>$ {totalamount}</p>
               </div>
               <div className={cart.checkout}>
-                  <button onClick={checkout}>CHECKOUT</button>
+                  <button onClick={checkout} aria-label="got to checkout">CHECKOUT</button>
               </div>
             </div>
           }

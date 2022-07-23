@@ -67,13 +67,13 @@ export default function Xx99I () {
             <p className={styles.price}>$ 1,750</p>
             <div className={styles.buttons}>
               <div className={styles.counter}>
-                <button onClick={decrease}>-</button>
+                <button onClick={decrease} aria-label="decrease">-</button>
                 <span>
                   {count}
                 </span>
-                <button onClick={increase}>+</button>
+                <button onClick={increase} aria-label="increase">+</button>
               </div>
-              <button className={styles.addCart} onClick={addCart}>ADD TO CART</button>
+              <button className={styles.addCart} onClick={addCart} aria-label="add to cart">ADD TO CART</button>
             </div>
           </div>
         </div>
