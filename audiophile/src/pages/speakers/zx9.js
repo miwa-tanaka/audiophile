@@ -50,7 +50,7 @@ export default function Zx9 () {
 
       <section className="pageWidth">
         <div className={styles.goBack}>
-          <Link to="/speakers/">Go Back</Link>
+          <Link to="/speakers/" aria-label="Go to speakers page">Go Back</Link>
         </div>
         <div className={styles.itemsWrapper}>
           <div className={styles.itemsImgs}>
@@ -140,21 +140,21 @@ export default function Zx9 () {
               <img src={zx7} alt="" loading="lazy" width="320" height="332" />
               <h4>ZX7 SPEAKER</h4>
               <div className={styles.url}>
-                <Link to="/speakers/zx7/">SEE PRODUCT</Link>
+                <Link to="/speakers/zx7/" aria-label="Go to zx7 page">SEE PRODUCT</Link>
               </div>
             </div>
             <div className={styles.product}>
               <img src={xx99i} alt="" loading="lazy" width="320" height="332" />
               <h4>XX99 MARK I</h4>
               <div className={styles.url}>
-                <Link to="/headphones/xx99-markI/">SEE PRODUCT</Link>
+                <Link to="/headphones/xx99-markI/" aria-label="Go to xx99-markI page">SEE PRODUCT</Link>
               </div>
             </div>
             <div className={styles.product}>
               <img src={xx59} alt="" loading="lazy" width="320" height="332" />
               <h4>XX59</h4>
               <div className={styles.url}>
-                <Link to="/headphones/xx59/">SEE PRODUCT</Link>
+                <Link to="/headphones/xx59/" aria-label="Go to xx59 page">SEE PRODUCT</Link>
               </div>
             </div>
           </div>

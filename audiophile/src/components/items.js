@@ -17,7 +17,7 @@ const Items = ({ siteTitle }) => (
         </div>
         <div className={items.itemLink}>
           <p>HEADPHONES</p>
-          <Link to="/headphones/">
+          <Link to="/headphones/" aria-label="Go to headphones page">
             SHOP
             <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" strokeWidth="2"/>
@@ -31,7 +31,7 @@ const Items = ({ siteTitle }) => (
         </div>
         <div className={items.itemLink}>
           <p>SPEAKERS</p>
-          <Link to="/speakers/">
+          <Link to="/speakers/" aria-label="Go to speakers page">
             SHOP
             <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" strokeWidth="2"/>
@@ -45,7 +45,7 @@ const Items = ({ siteTitle }) => (
         </div>
         <div className={items.itemLink}>
           <p>EARPHONES</p>
-          <Link to="/earphones/">
+          <Link to="/earphones/" aria-label="Go to earphones page">
             SHOP
             <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" strokeWidth="2"/>

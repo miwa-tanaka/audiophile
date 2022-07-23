@@ -16,7 +16,7 @@ const UsingDSG = () => (
       </a>
       .
     </p>
-    <Link to="/">Go back to the homepage</Link>
+    <Link to="/" aria-label="Go to the top page" >Go back to the homepage</Link>
   </Layout>
 )
 

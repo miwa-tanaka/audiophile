@@ -32,7 +32,7 @@ const IndexPage = () => (
             creating new possibilities for more pleasing and practical audio setups.
           </p>
           <div>
-            <Link to="/speakers/zx9/">SEE PRODUCT</Link>
+            <Link to="/speakers/zx9/" aria-label="Go to zx9 page">SEE PRODUCT</Link>
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@ const IndexPage = () => (
             that represents the top of the line powered speakers for home or studio use.
           </p>
           <div>
-            <Link to="/speakers/zx7/">SEE PRODUCT</Link>
+            <Link to="/speakers/zx7/" aria-label="Go to zx7 page">SEE PRODUCT</Link>
           </div>
         </div>
         <div className={styles.productImg}>

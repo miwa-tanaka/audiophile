@@ -45,22 +45,22 @@ function Header () {
               <span className="navicon"></span>
             </label>
           </div>
-          <Link to="/" className="logo">
+          <Link to="/" className="logo" aria-label="Go to top page">
             <img src={audiophile} alt="audiophile logo" loading="lazy" width="143" height="25" />
           </Link>
           <div className="linksWrapper">
             <ul className="links">
               <li>
-                <Link to="/">HOME</Link>
+                <Link to="/" aria-label="Go to top page">HOME</Link>
               </li>
               <li>
-                <Link to="/headphones/">HEADPHONES</Link>
+                <Link to="/headphones/" aria-label="Go to headphones page">HEADPHONES</Link>
               </li>
               <li>
-                <Link to="/speakers/">SPEAKERS</Link>
+                <Link to="/speakers/" aria-label="Go to speakers page">SPEAKERS</Link>
               </li>
               <li>
-                <Link to="/earphones/">EARPHONES</Link>
+                <Link to="/earphones/" aria-label="Go to earphones page">EARPHONES</Link>
               </li>
             </ul>
           </div>
@@ -82,7 +82,7 @@ function Header () {
                 </div>
                 <div className="itemLink">
                   <p>HEADPHONES</p>
-                  <Link to="/headphones/">
+                  <Link to="/headphones/" aria-label="Go to headphone page">
                     SHOP
                     <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" strokeWidth="2"/>
@@ -96,7 +96,7 @@ function Header () {
                 </div>
                 <div className="itemLink">
                   <p>SPEAKERS</p>
-                  <Link to="/speakers/">
+                  <Link to="/speakers/" aria-label="Go to speakers page">
                     SHOP
                     <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" strokeWidth="2"/>
@@ -110,7 +110,7 @@ function Header () {
                 </div>
                 <div className="itemLink">
                   <p>EARPHONES</p>
-                  <Link to="/earphones/">
+                  <Link to="/earphones/" aria-label="Go to earphones page">
                     SHOP
                     <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" strokeWidth="2"/>

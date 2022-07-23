@@ -50,7 +50,7 @@ export default function Yx1 () {
 
       <section className="pageWidth">
         <div className={styles.goBack}>
-          <Link to="/earphones/">Go Back</Link>
+          <Link to="/earphones/" aria-label="Go to earphones page">Go Back</Link>
         </div>
         <div className={styles.itemsWrapper}>
           <div className={styles.itemsImgs}>
@@ -140,21 +140,21 @@ export default function Yx1 () {
               <img src={xx99i} alt="" loading="lazy" width="320" height="332" />
               <h4>XX99 MARK I</h4>
               <div className={styles.url}>
-                <Link to="/headphones/xx99-markI/">SEE PRODUCT</Link>
+                <Link to="/headphones/xx99-markI/" aria-label="Go to xx99-markI page">SEE PRODUCT</Link>
               </div>
             </div>
             <div className={styles.product}>
               <img src={xx59} alt="" loading="lazy" width="320" height="332" />
               <h4>XX59</h4>
               <div className={styles.url}>
-                <Link to="/headphones/xx59/">SEE PRODUCT</Link>
+                <Link to="/headphones/xx59/" aria-label="Go to xx59 page">SEE PRODUCT</Link>
               </div>
             </div>
             <div className={styles.product}>
               <img src={zx9} alt="" loading="lazy" width="320" height="332" />
               <h4>ZX9 SPEAKER</h4>
               <div className={styles.url}>
-                <Link to="/speakers/zx9/">SEE PRODUCT</Link>
+                <Link to="/speakers/zx9/" aria-label="Go to zx99 page">SEE PRODUCT</Link>
               </div>
             </div>
           </div>

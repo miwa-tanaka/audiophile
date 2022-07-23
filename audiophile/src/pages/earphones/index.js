@@ -32,7 +32,7 @@ const IndexPage = () => (
             its active noise cancellation feature.
           </p>
           <div>
-            <Link to="/earphones/yx1/">SEE PRODUCT</Link>
+            <Link to="/earphones/yx1/" aria-label="Go to yx1 page">SEE PRODUCT</Link>
           </div>
         </div>
       </div>

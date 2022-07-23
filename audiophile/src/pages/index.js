@@ -27,7 +27,7 @@ const IndexPage = () => (
           <h1>XX99 Mark II <br /> HeadphoneS</h1>
           <p className={styles.newProductTxt}>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
           <div className={styles.newProductLink}>
-            <Link to="/headphones/xx99-markII/">SEE PRODUCT</Link>
+            <Link to="/headphones/xx99-markII/" aria-label="Go to xx99-markII page">SEE PRODUCT</Link>
           </div>
         </div>
         <div className={styles.newItemImg}>
@@ -45,7 +45,7 @@ const IndexPage = () => (
           <h2>ZX9 <br /> SPEAKER</h2>
           <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
           <div className={styles.zx9Link}>
-            <Link to="/speakers/zx9/">SEE PRODUCT</Link>
+            <Link to="/speakers/zx9/" aria-label="Go to zx9 page">SEE PRODUCT</Link>
           </div>
         </div>
       </div>
@@ -56,7 +56,7 @@ const IndexPage = () => (
         <div className={styles.zx7Txt}>
           <h3>ZX7 SPEAKER</h3>
           <div className={styles.zx7Link}>
-            <Link to="/speakers/zx7/">SEE PRODUCT</Link>
+            <Link to="/speakers/zx7/" aria-label="Go to zx7 page">SEE PRODUCT</Link>
           </div>
         </div>
       </div>
@@ -68,7 +68,7 @@ const IndexPage = () => (
           <div className={styles.yx1TxtPosition}>
             <h3>YX1 EARPHONES</h3>
             <div className={styles.yx1Link}>
-              <Link to="/earphones/yx1/">SEE PRODUCT</Link>
+              <Link to="/earphones/yx1/" aria-label="Go to yx1 page">SEE PRODUCT</Link>
             </div>
           </div>
         </div>

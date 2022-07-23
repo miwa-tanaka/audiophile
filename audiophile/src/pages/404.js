@@ -14,7 +14,7 @@ const NotFoundPage = () => (
       <h2>PAGE NOT FOUND</h2>
       <p>Oops! The page you are looking for does not exsit. It might have been moved or deleted.</p>
       <div className={styles.homeLink}>
-        <Link to="/">BACK TO HOME</Link>
+        <Link to="/" aria-label="Got to the top page">BACK TO HOME</Link>
       </div>
     </section>
   </Layout>
