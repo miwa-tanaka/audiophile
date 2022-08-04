@@ -6,6 +6,7 @@
 
 .newItem {
   width: 90%;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -124,6 +125,7 @@
 
 .productsWrapper {
   width: 80%;
+  max-width: 1400px;
   margin: 0 auto;
 
   @media screen and (max-width:768px) {
